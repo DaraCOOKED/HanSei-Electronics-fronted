@@ -8,6 +8,7 @@
             <nuxt-link to="/" class="hover:text-gray-400">Home</nuxt-link>
             <nuxt-link to="/about" class="hover:text-gray-400">About</nuxt-link>
             <nuxt-link to="/contact" class="hover:text-gray-400">Contact</nuxt-link>
+            <nuxt-link to="/blog>" class="hover:text-grey-400"> Blog </nuxt-link>
         </ul>   
     </nav>
     <div class="ml-auto p-4">
