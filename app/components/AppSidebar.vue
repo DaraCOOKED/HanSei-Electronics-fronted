@@ -28,8 +28,6 @@
                 <NuxtLink to="/setting">Setting</NuxtLink>
             </li>
 
-
-
         </ul>
     </div>
 </template>
