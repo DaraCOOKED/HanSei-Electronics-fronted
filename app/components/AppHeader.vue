@@ -27,18 +27,6 @@
 
 
 
-      <!-- Profile -->
-      <div class="flex items-center gap-2 cursor-pointer">
-        <img
-          src="https://i.pravatar.cc/40"
-          class="w-9 h-9 rounded-full"
-        />
-        <span class="hidden md:block text-gray-700">
-          Admin
-        </span>
-      </div>
-
     </div>
   </header>
 </template>
-```
