@@ -11,7 +11,7 @@ const stats = [
 </script>
 
 <template>
-    <div class="flex">
+    <div class="flex overly">
 
         <Appsidebar />
         <div class="mt-6 p-6 w-full ">
