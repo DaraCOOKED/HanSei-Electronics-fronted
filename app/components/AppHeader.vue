@@ -1,24 +1,41 @@
-<template>
-  <header class="bg-gray-900 text-white flex justify-between items-center">
-    <div class="flex items-between align-center justify-center">
-      <h1 class="text-3xl font-bold p-4">Logo</h1>
-      <nav class="ml-10 flex justify-around  align-center items-center ">
 
-        <ul class="flex space-x-4 text-white p-4 align-center justify-center">
-          <nuxt-link to="/" class="hover:text-gray-400">Home</nuxt-link>
-          <nuxt-link to="/about" class="hover:text-gray-400">About</nuxt-link>
-          <nuxt-link to="/contact" class="hover:text-gray-400">Contact</nuxt-link>
-          <nuxt-link to="/blog>" class="hover:text-grey-400"> Blog </nuxt-link>
-        </ul>
-      </nav>
-      <div class="ml-auto p-4">
-        <button class="border-2 hover:bg-gray-600 text-white rounded-xl py-2 px-4">
-          <div class="text-sm" value="submit">
-            <nuxt-link to="/sign">Sign Up</nuxt-link>
-          </div>
-        </button>
-      </div>
+<script setup>
+
+const sidebarOpen = useState('sidebarOpen')
+
+function toggleSidebar() {
+  sidebarOpen.value = !sidebarOpen.value
+}
+
+</script>
+<template>
+  <header class="bg-white shadow-md h-16 flex items-center justify-between px-6">
+
+    <!-- Left -->
+    <div class="flex items-center h- gap-4">
+         <button @click="toggleSidebar">
+    ☰
+  </button>
+
+      <h1 class="text-xl font-semibold text-gray-800">
+        Workforce Management
+      </h1>
+    </div>
+
+    <!-- Center Search -->
+    <div class="hidden md:block w-1/3">
+      <input
+        type="text"
+        placeholder="Search employees..."
+        class="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring focus:ring-blue-200"
+      />
+    </div>
+
+    <!-- Right -->
+    <div class="flex items-center gap-6">
+
+
+
     </div>
   </header>
-
 </template>
