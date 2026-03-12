@@ -15,31 +15,33 @@ const stats = [
 
         <Appsidebar />
         <div class="mt-6 p-6 w-full ">
-            <div class="w-full flex">
+            <div class="w-full flex justify-between">
                 <div class="w-[500px] ">
                     <h2 class="text-3xl font-syne font-bold text-5xl tracking-tighter">
                         Employee Management
                     </h2>
                 </div>
-                <div class="ml-30">
-                <input v-model="searchQuery" type="search" placeholder="Search items..." class="border p-2 rounded-[5px] " /> <ul> <li v-for="item in filteredItems" :key="item">{{ item }}</li> </ul>
-                </div>
-                <div class="ml-7">
-                    <select id="" v-model="selectedValue" class="bg-lime-300 rounded-[5px] text-gray-900 font-bold px-5 py-2.5">
-                        <option value="" >All Departments</option>
-                        <option value="" >Engineering</option>
-                        <option value="" >Design</option>
-                        <option value="" >Product</option>
-                        <option value="" >Marketing</option>
-                        <option value="" >Finance</option>
-                        <option value="" >HR</option>
+                <div class="flex">
+                    <div class="ml-30">
+                    <input v-model="searchQuery" type="search" placeholder="Search items..." class="border p-2 rounded-[5px] " /> <ul> <li v-for="item in filteredItems" :key="item">{{ item }}</li> </ul>
+                    </div>
+                    <div class="ml-7">
+                        <select id="" v-model="selectedValue" class="bg-lime-300 rounded-[5px] text-gray-900 font-bold px-5 py-2.5">
+                            <option value="" >All Departments</option>
+                            <option value="" >Engineering</option>
+                            <option value="" >Design</option>
+                            <option value="" >Product</option>
+                            <option value="" >Marketing</option>
+                            <option value="" >Finance</option>
+                            <option value="" >HR</option>
 
-                    </select>
-                </div>
-                <div class="ml-7">
-                    <button class="bg-lime-300 text-gray-900 font-bold px-5 py-2 rounded-[5px] hover: border-none">
-                        + Add Employee
-                    </button>
+                        </select>
+                    </div>
+                    <div class="ml-7">
+                        <button class="bg-lime-300 text-gray-900 font-bold px-5 py-2 rounded-[5px] hover: border-none">
+                            + Add Employee
+                        </button>
+                    </div>
                 </div>
             </div>
             <div class="mt-1">
@@ -47,14 +49,43 @@ const stats = [
                     12 of 12 employees
                 </p>
             </div>
-            <div class="container flex justify-between mt-10">
-                <Employee number="12" label="Total Employees" :percentage="100" />
-                <Employee number="9"  label="Active"          :percentage="75"  />
-                <Employee number="6"  label="Departments"     :percentage="50"  />
-                <Employee number="3"  label="New This Month"  :percentage="25"  />
+
+
+
+            <div class="container flex justify-between mt-10 ml-10 mr-10">
+                <Employee number="12" text="Total Employees" :percentage="100" />
+                <Employee number="9"  text="Active"          :percentage="75"  />
+                <Employee number="6"  text="Departments"     :percentage="50"  />
+                <Employee number="3"  text="New This Month"  :percentage="25"  />
             </div>
 
+
+
+            <div class="mt-15 ml-10 mr-10">
+            <div class="flex justify-between bg-blue-200 pr-2 pl-2">
+                <NuxtLink to="/NAME">NAME</NuxtLink>
+                <NuxtLink to="/NAME">DEPT</NuxtLink>
+                <NuxtLink to="/NAME">ROLE</NuxtLink>
+                <NuxtLink to="/NAME">SALARY</NuxtLink>
+                <NuxtLink to="/NAME">STATUS</NuxtLink>
+                <NuxtLink to="/NAME">ACTIONS</NuxtLink>
+
+            </div>
+            <div>
+                <EmployeeStaff picture="" name="Bora" email="chorkbora4@gmail.com" department="engineering" role="Lead Engineer" salary="120,000" status="	inactive"/>
+                <EmployeeStaff picture="" name="Bora" email="chorkbora4@gmail.com" department="engineering" role="Lead Engineer" salary="120,000" status="	inactive"/>
+                <EmployeeStaff picture="" name="Bora" email="chorkbora4@gmail.com" department="engineering" role="Lead Engineer" salary="120,000" status="	inactive"/>
+                <EmployeeStaff picture="" name="Bora" email="chorkbora4@gmail.com" department="engineering" role="Lead Engineer" salary="120,000" status="	inactive"/>
+                <EmployeeStaff picture="" name="Bora" email="chorkbora4@gmail.com" department="engineering" role="Lead Engineer" salary="120,000" status="	inactive"/>
+                <EmployeeStaff picture="" name="Bora" email="chorkbora4@gmail.com" department="engineering" role="Lead Engineer" salary="120,000" status="	inactive"/>
+                <EmployeeStaff picture="" name="Bora" email="chorkbora4@gmail.com" department="engineering" role="Lead Engineer" salary="120,000" status="	inactive"/>
+                <EmployeeStaff picture="" name="Bora" email="chorkbora4@gmail.com" department="engineering" role="Lead Engineer" salary="120,000" status="	inactive"/>
+            </div>
         </div>
+
+        </div>
+        
+
         
 
     </div>
