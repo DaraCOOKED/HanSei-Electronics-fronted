@@ -23,10 +23,5 @@ logs
 .env.*
 !.env.example
 
-<<<<<<< HEAD
-pachage.json
-pachage-lock.json
-=======
 package.json
 package-lock.json
->>>>>>> 393028c771045f3d81be1189931e89e12916dc55
