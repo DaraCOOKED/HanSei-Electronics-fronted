@@ -1,14 +1,13 @@
-import tailwindcss from "@tailwindcss/vite";
-
-export default defineNuxtConfig({
-  compatibilityDate: "2025-07-15",
-  devtools: { enabled: true },
-
-  css: ['~/assets/css/main.css'],
-
-  vite: {
-    plugins: [
-      tailwindcss() ,
-    ],
-  },
+// nuxt.config.js or nuxt.config.ts
+export default defineNuxtConfig({ // or module.exports in Nuxt 2
+  app: {
+    head: {
+      script: [
+        // Example: Adding a CDN script for jQuery
+        {
+          src: 'https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4',
+        }
+      ],
+    }
+  }
 })
