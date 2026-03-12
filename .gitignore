@@ -22,3 +22,6 @@ logs
 .env
 .env.*
 !.env.example
+
+pachage.json
+pachage-lock.json
