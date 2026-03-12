@@ -1,6 +1,12 @@
+<script setup>
+const sidebarOpen = useState('sidebarOpen')
+</script>
+
+
 <template>
-    <div class="w-64 bg-blue-900 text-white h-screen p-5">
-        <h1 class="text-4xl font-bold mt-6">Dashboard</h1>
+     <div :class="['fixed top-16 h-full h-screen p-5 w-64 bg-blue-900 text-white transition-transform duration-300',sidebarOpen ? 'translate-x-0' : '-translate-x-full']"
+  >
+      <h1 class="text-4xl font-bold mt-6">Dashboard</h1>
 
         <ul class="space-y-4 mt-15">
 
