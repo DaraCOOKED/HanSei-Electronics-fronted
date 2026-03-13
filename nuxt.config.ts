@@ -1,5 +1,6 @@
 // nuxt.config.js or nuxt.config.ts
-export default defineNuxtConfig({ // or module.exports in Nuxt 2
+export default defineNuxtConfig({
+  // or module.exports in Nuxt 2
   app: {
     head: {
       script: [
@@ -10,5 +11,7 @@ export default defineNuxtConfig({ // or module.exports in Nuxt 2
         }
       ],
     }
-  }
+  },
+
+  modules: ['@nuxt/fonts']
 })
