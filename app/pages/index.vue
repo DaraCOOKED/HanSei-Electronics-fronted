@@ -1,11 +1,11 @@
 <script setup>
-import Appsidebar from '~/components/Appsidebar.vue'
+import AppSidebar from '~/components/AppSidebar.vue'
 </script>
 
 <template>
     <div class="flex">
 
-        <Appsidebar />
+        <AppSidebar />
 
         <div class="p-6">
             <h1>Dashboard</h1>
