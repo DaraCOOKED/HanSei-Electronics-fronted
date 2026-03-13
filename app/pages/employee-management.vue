@@ -1,7 +1,6 @@
 <script setup>
-<<<<<<< HEAD
-import AppSidebar from '~/components/AppSidebar.vue';
-=======
+
+
 import Appsidebar from '~/components/Appsidebar.vue';
 import Employee from '~/components/Employee.vue';
 
@@ -11,17 +10,12 @@ const stats = [
   { val: '6',  lab: 'Departments',     percent: 50  },
   { val: '3',  lab: 'New This Month',  percent: 25  }
 ]
->>>>>>> main
 </script>
 
 <template>
     <div class="flex overly">
 
-<<<<<<< HEAD
-        <AppSidebar />
-        <div class="mt-6 p-6 w-full">
-            <h2>Employee Management</h2>
-=======
+
         <Appsidebar />
         <div class="mt-6 p-6 w-full ">
             <div class="w-full flex">
@@ -62,7 +56,7 @@ const stats = [
                 <Employee number="6"  label="Departments"     :percentage="50"  />
                 <Employee number="3"  label="New This Month"  :percentage="25"  />
             </div>
->>>>>>> main
+
 
         </div>
         

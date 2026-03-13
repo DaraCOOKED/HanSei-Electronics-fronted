@@ -1,7 +1,5 @@
 <script setup>
-<<<<<<< HEAD
-import AppSidebar from '~/components/AppSidebar.vue';
-=======
+
 import { ref, computed } from 'vue'
 
 definePageMeta({ layout: 'default' })
@@ -114,14 +112,10 @@ const deleteEmployee = () => {
 <template>
   <div class="min-h-screen bg-gray-50 font-['Sora',sans-serif] flex">
 
-<<<<<<< HEAD
-        <AppSidebar />
-        <div class="mt-6 p-6 w-full">
-            <h2>setting</h2>
-=======
+
     <!-- Sidebar -->
     <Appsidebar />
->>>>>>> main
+
 
     <!-- Main content - shifts based on sidebar state -->
     <div
