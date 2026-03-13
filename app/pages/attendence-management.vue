@@ -1,10 +1,11 @@
 <script setup>
-import Appsidebar from '~/components/Appsidebar.vue';
+import AppSidebar from '~/components/AppSidebar.vue'
 </script>
 
 <template>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <div class="flex">
+
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
         <Appsidebar />
         <div class="mt-6 p-6 w-full ">
@@ -77,6 +78,7 @@ import Appsidebar from '~/components/Appsidebar.vue';
                 <div class="">Sunday</div>
                 <div class="">Sunday</div>
             </div>
+
         </div>
     </div>
     

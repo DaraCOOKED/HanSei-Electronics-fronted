@@ -1,9 +1,9 @@
 <template>
-  <div>
-    <AppHeader />
-    <main>
-      <NuxtPage />
+  <AppHeader />
+  <div class="flex min-h-screen">
+
+    <main class="flex-1">
+      <slot />
     </main>
-    <AppFooter />
   </div>
 </template>
