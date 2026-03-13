@@ -46,7 +46,7 @@
         
         <div class="text-center">
             <h1 class="text-3xl justify-center flex  font-bold text-gray-900">
-                <img src="/image.png" class=" absolute bottom-135 w-90">
+                <img src="/company-logo.png" class=" absolute bottom-135 w-90">
             </h1>
         </div>
 
