@@ -130,7 +130,7 @@ function closeForm() {
 
                 <div v-if="showForm" class="rounded-md block p-5 mt-5 border">
                     <p class="text-center w-full font-black text-4xl">Add Employee
-                        <button @click="showForm = false" class="left-0 top-0 border-1 rounded-sm hover:bg-red-500">
+                        <button @click="showForm = false" class="left-0 top-0 border rounded-sm hover:bg-red-500">
 
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                                 stroke="currentColor" class="w-10 h-10">
