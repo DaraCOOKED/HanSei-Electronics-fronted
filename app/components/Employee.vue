@@ -10,11 +10,11 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="relative overflow-hidden bg-[#3f8f26] rounded-xl p-6 min-w-[350px] flex flex-col">
+  <div class="relative overflow-hidden bg-[#a9def9] rounded-xl p-6 min-w-[300px] flex hover:bg-gray-100 transition-transform duration-400 ease-in-out hover:-translate-y-1">
     
     <!-- Content -->
     <div>
-      <h2 class="font-extrabold text-4xl text-white m-0 leading-none">
+      <h2 class="font-extrabold text-4xl text-black m-0 leading-none">
         {{ number }}
       </h2>
       <p class="text-black uppercase tracking-widest text-xs mt-2">

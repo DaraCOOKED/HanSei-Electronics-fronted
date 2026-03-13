@@ -7,7 +7,7 @@ const props = defineProps({
   role: String,
   salary: String,
   status: {
-    type: String,
+    type: String, 
     default: 'active',
   },
   color: {
@@ -20,7 +20,7 @@ const emit = defineEmits(['edit', 'delete'])
 </script>
 
 <template>
-  <tr class="w-full flex justify-between items-center border-b border-[#181b25] transition-colors duration-150 hover:bg-[#161923]">
+  <tr class="w-full flex justify-between items-center border-b border-t border-[#181b25] mt-3 transition-colors duration-150 hover:bg-[#] rounded-lg">
 
     <!-- Name -->
     <td class="flex-1 min-w-[200px] px-5 py-3.5">
@@ -42,7 +42,7 @@ const emit = defineEmits(['edit', 'delete'])
 
         <!-- Name + Email info -->
         <div class="flex flex-col gap-0.5">
-          <span class="font-medium text-[#e0ddd6] text-[0.9rem]">{{ name }}</span>
+          <span class="font-medium text-[#000000] text-[0.9rem]">{{ name }}</span>
           <span class="text-[#4a5168] text-[0.77rem]">{{ email }}</span>
         </div>
       </div>
@@ -50,7 +50,7 @@ const emit = defineEmits(['edit', 'delete'])
 
     <!-- Department -->
     <td class="flex-1 px-5 py-3.5">
-      <span class="bg-[#1a1f2e] border border-[#252b3b] rounded-md px-3 py-1 text-[0.77rem] text-[#8a9ab8] whitespace-nowrap">
+      <span class="bg-[#] border border-[#838383] rounded-md px-3 py-1 text-[0.77rem] text-[#8a9ab8] whitespace-nowrap">
         {{ department }}
       </span>
     </td>
@@ -61,7 +61,7 @@ const emit = defineEmits(['edit', 'delete'])
     </td>
 
     <!-- Salary -->
-    <td class="flex-1 px-5 py-3.5 text-[#c8f064] font-semibold text-[0.9rem]">
+    <td class="flex-1 px-5 py-3.5 text-[#3B3030] font-semibold text-[0.9rem]">
       ${{ salary }}
     </td>
 
@@ -70,6 +70,7 @@ const emit = defineEmits(['edit', 'delete'])
       <span
         class="inline-block px-3.5 py-1 rounded-full text-[0.75rem] font-semibold tracking-wide capitalize border"
         :class="{
+          
           'bg-[rgba(92,224,138,0.12)] text-[#5ce08a] border-[rgba(92,224,138,0.25)]' : status === 'active',
           'bg-[r(224,92,92,0.12)]  text-[#e05c5c] border-[rgba(224,92,92,0.25)]'  : status === 'inactive',
           'bg-[rgba(224,163,92,0.12)] text-[#e0a35c] border-[rgba(224,163,92,0.25)]' : status === 'onleave',
