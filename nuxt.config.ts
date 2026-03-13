@@ -7,6 +7,7 @@ export default defineNuxtConfig({
         // Example: Adding a CDN script for jQuery
         {
           src: 'https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4',
+        
         }
       ],
     }
