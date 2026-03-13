@@ -1,115 +1,12 @@
 <script setup>
 
+
 import { ref, computed } from 'vue'
 
-definePageMeta({ layout: 'default' })
-
-useHead({
-  link: [{ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap' }]
-})
-
-const sidebarOpen = useState('sidebarOpen', () => true)
-
-const searchQuery = ref('')
-const selectedDepartment = ref('All')
-const showAddModal = ref(false)
-const showDeleteModal = ref(false)
-const editingEmployee = ref(null)
-const deletingEmployee = ref(null)
-const currentPage = ref(1)
-const itemsPerPage = 8
-
-const departments = ['All', 'Engineering', 'Marketing', 'Finance', 'HR', 'Operations']
-
-
-
-const newEmployee = ref({ name: '', email: '', role: '', department: 'Engineering', status: 'Active' })
-
-const stats = computed(() => ({
-  total: employees.value.length,
-  active: employees.value.filter(e => e.status === 'Active').length,
-  onLeave: employees.value.filter(e => e.status === 'On Leave').length,
-  inactive: employees.value.filter(e => e.status === 'Inactive').length,
-}))
-
-const filtered = computed(() => {
-  return employees.value.filter(e => {
-    const matchSearch =
-      e.name.toLowerCase().includes(searchQuery.value.toLowerCase()) ||
-      e.email.toLowerCase().includes(searchQuery.value.toLowerCase()) ||
-      e.role.toLowerCase().includes(searchQuery.value.toLowerCase())
-    const matchDept = selectedDepartment.value === 'All' || e.department === selectedDepartment.value
-    return matchSearch && matchDept
-  })
-})
-
-const totalPages = computed(() => Math.ceil(filtered.value.length / itemsPerPage))
-
-const paginated = computed(() => {
-  const start = (currentPage.value - 1) * itemsPerPage
-  return filtered.value.slice(start, start + itemsPerPage)
-})
-
-const avatarColor = (initials) => {
-  const colors = ['bg-blue-500', 'bg-indigo-500', 'bg-violet-500', 'bg-emerald-500', 'bg-amber-500', 'bg-rose-500', 'bg-cyan-500']
-  const index = (initials.charCodeAt(0) + initials.charCodeAt(1)) % colors.length
-  return colors[index]
-}
-
-const statusStyle = (status) => {
-  if (status === 'Active') return 'bg-emerald-100 text-emerald-700'
-  if (status === 'On Leave') return 'bg-amber-100 text-amber-700'
-  return 'bg-gray-100 text-gray-500'
-}
-
-const openAdd = () => {
-  editingEmployee.value = null
-  newEmployee.value = { name: '', email: '', role: '', department: 'Engineering', status: 'Active' }
-  showAddModal.value = true
-}
-
-const openEdit = (emp) => {
-  editingEmployee.value = emp
-  newEmployee.value = { ...emp }
-  showAddModal.value = true
-}
-
-const saveEmployee = () => {
-  if (!newEmployee.value.name || !newEmployee.value.email || !newEmployee.value.role) return
-  if (editingEmployee.value) {
-    const idx = employees.value.findIndex(e => e.id === editingEmployee.value.id)
-    if (idx !== -1) {
-      employees.value[idx] = {
-        ...employees.value[idx],
-        ...newEmployee.value,
-        avatar: newEmployee.value.name.split(' ').map(n => n[0]).join('').slice(0, 2).toUpperCase()
-      }
-    }
-  } else {
-    employees.value.push({
-      id: Date.now(),
-      ...newEmployee.value,
-      avatar: newEmployee.value.name.split(' ').map(n => n[0]).join('').slice(0, 2).toUpperCase(),
-      joined: new Date().toISOString().split('T')[0]
-    })
-  }
-  showAddModal.value = false
-}
-
-const confirmDelete = (emp) => {
-  deletingEmployee.value = emp
-  showDeleteModal.value = true
-}
-
-const deleteEmployee = () => {
-  employees.value = employees.value.filter(e => e.id !== deletingEmployee.value.id)
-  showDeleteModal.value = false
-  deletingEmployee.value = null
-}
->>>>>>> main
 </script>
 
 <template>
+
   <div class="min-h-screen bg-gray-50 font-['Sora',sans-serif] flex">
 
 
@@ -397,5 +294,5 @@ const deleteEmployee = () => {
       </div>
     </Teleport>
 
-  </div>
+<AppSidebar />
 </template>
