@@ -1,7 +1,10 @@
 <script setup>
 
 
-import AppSidebar from '~/components/AppSidebar.vue';
+
+
+import Appsidebar from '~/components/Appsidebar.vue';
+
 import Employee from '~/components/Employee.vue';
 
 const stats = [
@@ -12,8 +15,12 @@ const stats = [
 ]
 </script>
 
+
 <template>
-    <div class="flex overly">
+    <div class="flex min-h-screen">
+
+  <!-- Sidebar -->
+  <Appsidebar />
 
 
         <AppSidebar />
@@ -58,8 +65,32 @@ const stats = [
             </div>
 
 
-        </div>
-        
 
+      <input
+        type="search"
+        placeholder="Search items..."
+        class="border p-2 rounded-md"
+      />
+
+      <select class="bg-lime-300 px-4 py-2 rounded-md font-bold">
+        <option>All Departments</option>
+      </select>
+
+      <button class="bg-lime-300 px-4 py-2 rounded-md font-bold">
+        + Add Employee
+      </button>
     </div>
+
+    <!-- Cards -->
+    <div class="grid grid-cols-4 gap-6 mt-10">
+      <Employee number="12" label="Total Employees" :percentage="100"/>
+      <Employee number="9" label="Active" :percentage="75"/>
+      <Employee number="6" label="Departments" :percentage="50"/>
+      <Employee number="3" label="New This Month" :percentage="25"/>
+    </div>
+
+  </div>
+
+</div>
+   
 </template>

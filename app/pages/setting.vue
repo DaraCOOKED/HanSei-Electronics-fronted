@@ -1,7 +1,9 @@
 <script setup>
 
+
 import { ref, computed } from 'vue'
 
+<<<<<<< HEAD
 definePageMeta({ layout: 'default' })
 
 useHead({
@@ -107,9 +109,12 @@ const deleteEmployee = () => {
   deletingEmployee.value = null
 }
 
+=======
+>>>>>>> 91271c3c463faf682358fec3e212e1edbdcc1630
 </script>
 
 <template>
+
   <div class="min-h-screen bg-gray-50 font-['Sora',sans-serif] flex">
 
 
@@ -397,5 +402,5 @@ const deleteEmployee = () => {
       </div>
     </Teleport>
 
-  </div>
+<AppSidebar />
 </template>

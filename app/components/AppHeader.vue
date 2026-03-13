@@ -12,7 +12,7 @@ function toggleSidebar() {
   <header class="bg-white shadow-md h-16 flex items-center justify-between px-6">
 
     <!-- Left -->
-    <div class="flex items-center h- gap-4">
+    <div class="flex items-center text-2xl gap-4">
          <button @click="toggleSidebar">
     ☰
   </button>
