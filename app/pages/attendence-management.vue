@@ -1,12 +1,12 @@
 <script setup>
-import AppSidebar from '~/components/AppSidebar.vue'
+import AppSidebar from '../components/AppSidebar.vue';
 </script>
 
 <template>
     <div class="flex">
 <AppSidebar />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-        <Appsidebar />
+        <AppSidebar />
         <div class="mt-6 p-6 w-full ">
             <div class="w-full flex justify-between">
                 <div class="w-xl ">
@@ -67,17 +67,279 @@ import AppSidebar from '~/components/AppSidebar.vue'
                    </button>
             </div>
             <div class="border mt-15"></div>
-            <div class="flex justify-between">
+            <div class="flex mt-5 text-xl justify-between text-center align-center">
                 <div class="">Employee</div>
                 <div class="">Sunday</div>
-                <div class="">Sunday</div>
-                <div class="">Sunday</div>
-                <div class="">Sunday</div>
-                <div class="">Sunday</div>
-                <div class="">Sunday</div>
-                <div class="">Sunday</div>
+                <div class="">Monday</div>
+                <div class="">Tuesday</div>
+                <div class="">Wednesday</div>
+                <div class="">Thursday</div>
+                <div class="">Friday</div>
+                <div class="mr-20">Saturday</div>
+            </div>
+            <div class="border mt-7"></div>
+            <div class="flex">
+                <div class="flex gap-4 border p-5">
+                    <div class="w-[60px] border rounded-xl "><img class="rounded-xl w-[100%] h-[100%]" src="https://media.istockphoto.com/id/1399565382/photo/young-happy-mixed-race-businessman-standing-with-his-arms-crossed-working-alone-in-an-office.jpg?s=612x612&w=0&k=20&c=buXwOYjA_tjt2O3-kcSKqkTp2lxKWJJ_Ttx2PhYe3VM=" alt=""></div>
+                    <div class="mt-2">Bora Russell <br> UX/UI Designer</div>
+                </div>
+                <div class="border p-5 px-11">
+                    4
+                    <div class="flex w-[100px] gap-2 mt-2 bg-green-100 p-1 rounded-lg">
+                        <div class=""><i class="fa-regular fa-circle-check"></i></div>
+                        <div class="">8 Hours</div>
+                    </div>
+                </div>
+                 <div class="border p-5 px-11">
+                    5
+                    <div class="flex w-[100px] gap-2 mt-2 bg-orange-100 p-1 rounded-lg">
+                        <div class=""><i class="fa-solid fa-circle-exclamation"></i></div>
+                        <div class="">4h 36mn</div>
+                    </div>
+                </div>
+                 <div class="border p-5 px-11">
+                    6
+                    <div class="flex w-[100px] gap-2 mt-2 bg-purple-100 p-1 rounded-lg">
+                        <div class=""><i class="fa-regular fa-face-frown"></i></div>
+                        <div class="">Leave</div>
+                    </div>
+                </div>
+               <div class="border p-5 px-11">
+                    7
+                    <div class="flex w-[100px] gap-2 mt-2 bg-green-100 p-1 rounded-lg">
+                        <div class=""><i class="fa-regular fa-circle-check"></i></div>
+                        <div class="">8h 40mn</div>
+                    </div>
+                </div>
+                <div class="border p-5 px-11">
+                    8
+                    <div class="flex w-[100px] gap-2 mt-2 bg-green-100 p-1 rounded-lg">
+                        <div class=""><i class="fa-regular fa-circle-check"></i></div>
+                        <div class="">Active</div>
+                    </div>
+                </div>
+                <div class="border p-5 px-14">
+                    9
+                    <div class="flex w-[100px] gap-2 mt-2 bg-white p-1 rounded-lg">
+                    </div>
+                </div>
+                <div class=" p-5 px-11">
+                    10
+                    <div class="flex w-[100px] gap-2 mt-2 bg-white p-1 rounded-lg">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="flex">
+                <div class="flex gap-4 border p-5">
+                    <div class="w-[60px] border rounded-xl "><img class="rounded-xl w-[100%] h-[100%]" src="https://media.istockphoto.com/id/1682296067/photo/happy-studio-portrait-or-professional-man-real-estate-agent-or-asian-businessman-smile-for.jpg?s=612x612&w=0&k=20&c=9zbG2-9fl741fbTWw5fNgcEEe4ll-JegrGlQQ6m54rg=" alt=""></div>
+                    <div class="mt-2">Sithul Coco <br> UX/UI Designer</div>
+                </div>
+                <div class="border p-5 px-11">
+                    4
+                    <div class="flex w-[100px] gap-2 mt-2 bg-orange-100 p-1 rounded-lg">
+                        <div class=""><i class="fa-solid fa-circle-exclamation"></i></div>
+                        <div class="">6h 24mn</div>
+                    </div>
+                </div>
+                 <div class="border p-5 px-11">
+                    5
+                    <div class="flex w-[100px] gap-2 mt-2 bg-green-100 p-1 rounded-lg">
+                        <div class=""><i class="fa-regular fa-circle-check"></i></div>
+                        <div class="">8h 40mn</div>
+                    </div>
+                </div>
+                 <div class="border p-5 px-11">
+                    6
+                    <div class="flex w-[100px] gap-2 mt-2 bg-green-100 p-1 rounded-lg">
+                        <div class=""><i class="fa-regular fa-circle-check"></i></div>
+                        <div class="">8 Hours</div>
+                    </div>
+                </div>
+               <div class="border p-5 px-11">
+                    7
+                    <div class="flex w-[100px] gap-2 mt-2 bg-red-100 p-1 rounded-lg">
+                        <div class=""><i class="fa-regular fa-circle-xmark"></i></div>
+                        <div class="">Absent</div>
+                    </div>
+                </div>
+                <div class="border p-5 px-11">
+                    8
+                    <div class="flex w-[100px] gap-2 mt-2 bg-green-100 p-1 rounded-lg">
+                        <div class=""><i class="fa-regular fa-circle-check"></i></div>
+                        <div class="">Active</div>
+                    </div>
+                </div>
+                <div class="border p-5 px-14">
+                    9
+                    <div class="flex w-[100px] gap-2 mt-2 bg-white p-1 rounded-lg">
+                    </div>
+                </div>
+                <div class=" p-5 px-11">
+                    10
+                    <div class="flex w-[100px] gap-2 mt-2 bg-white p-1 rounded-lg">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="flex">
+                <div class="flex gap-4 border p-5">
+                    <div class="w-[60px] border rounded-xl "><img class="rounded-xl w-[100%] h-[100%]" src="https://st2.depositphotos.com/1594308/8523/i/450/depositphotos_85237228-stock-photo-happy-businessman-with-touchpad.jpg" alt=""></div>
+                    <div class="mt-2">Brooklyn <br>UX/UI Designer</div>
+                </div>
+                <div class="border p-5 px-11">
+                    4
+                    <div class="flex w-[100px] gap-2 mt-2 bg-green-100 p-1 rounded-lg">
+                        <div class=""><i class="fa-regular fa-circle-check"></i></div>
+                        <div class="">8 Hours</div>
+                    </div>
+                </div>
+                 <div class="border p-5 px-11">
+                    5
+                    <div class="flex w-[100px] gap-2 mt-2 bg-green-100 p-1 rounded-lg">
+                        <div class=""><i class="fa-regular fa-circle-check"></i></div>
+                        <div class="">8h 15mn</div>
+                    </div>
+                </div>
+                 <div class="border p-5 px-11">
+                    6
+                   <div class="flex w-[100px] gap-2 mt-2 bg-orange-100 p-1 rounded-lg">
+                        <div class=""><i class="fa-solid fa-circle-exclamation"></i></div>
+                        <div class="">5h 17mn</div>
+                    </div>
+                </div>
+               <div class="border p-5 px-11">
+                    7
+                    <div class="flex w-[100px] gap-2 mt-2 bg-green-100 p-1 rounded-lg">
+                        <div class=""><i class="fa-regular fa-circle-check"></i></div>
+                        <div class="">8 Hours</div>
+                    </div>
+                </div>
+                <div class="border p-5 px-11">
+                    8
+                     <div class="flex w-[100px] gap-2 mt-2 bg-purple-100 p-1 rounded-lg">
+                        <div class=""><i class="fa-regular fa-face-frown"></i></div>
+                        <div class="">Leave</div>
+                    </div> 
+                </div>
+                <div class="border p-5 px-14">
+                    9
+                    <div class="flex w-[100px] gap-2 mt-2 bg-white p-1 rounded-lg">
+                    </div>
+                </div>
+                <div class=" p-5 px-11">
+                    10
+                    <div class="flex w-[100px] gap-2 mt-2 bg-white p-1 rounded-lg">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="flex">
+                <div class="flex gap-4 border p-5">
+                    <div class="w-[60px] border rounded-xl "><img class="rounded-xl w-[100%] h-[100%]" src="https://d2j2uxe7jasn0r.cloudfront.net/thumbnails/image/rDtN98Qoishumwih/WM2A4916-1352_thumb.jpg" alt=""></div>
+                    <div class="mt-2">Eleanor Pena <br> UX/UI Designer</div>
+                </div>
+                <div class="border p-5 px-11">
+                    4
+                    <div class="flex w-[100px] gap-2 mt-2 bg-green-100 p-1 rounded-lg">
+                        <div class=""><i class="fa-regular fa-circle-check"></i></div>
+                        <div class="">8h 15mn</div>
+                    </div>
+                </div>
+                 <div class="border p-5 px-11">
+                    5
+                    <div class="flex w-[100px] gap-2 mt-2 bg-green-100 p-1 rounded-lg">
+                        <div class=""><i class="fa-regular fa-circle-check"></i></div>
+                        <div class="">8h 40mn</div>
+                    </div>
+                </div>
+                 <div class="border p-5 px-11">
+                    6
+                    <div class="flex w-[100px] gap-2 mt-2 bg-green-100 p-1 rounded-lg">
+                        <div class=""><i class="fa-regular fa-circle-check"></i></div>
+                        <div class="">8h 23mn</div>
+                    </div>
+                </div>
+               <div class="border p-5 px-11">
+                    7
+                   <div class="flex w-[100px] gap-2 mt-2 bg-orange-100 p-1 rounded-lg">
+                        <div class=""><i class="fa-solid fa-circle-exclamation"></i></div>
+                        <div class="">4h 36mn</div>
+                    </div>
+                </div>
+                <div class="border p-5 px-11">
+                    8
+                    <div class="flex w-[100px] gap-2 mt-2 bg-green-100 p-1 rounded-lg">
+                        <div class=""><i class="fa-regular fa-circle-check"></i></div>
+                        <div class="">Active</div>
+                    </div>
+                </div>
+                <div class="border p-5 px-14">
+                    9
+                    <div class="flex w-[100px] gap-2 mt-2 bg-white p-1 rounded-lg">
+                    </div>
+                </div>
+                <div class=" p-5 px-11">
+                    10
+                    <div class="flex w-[100px] gap-2 mt-2 bg-white p-1 rounded-lg">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="flex">
+                <div class="flex gap-4 border p-5">
+                    <div class="w-[60px] border rounded-xl "><img class="rounded-xl w-[100%] h-[100%]" src="https://img.freepik.com/free-photo/close-up-positive-executive-work_1098-519.jpg?semt=ais_rp_progressive&w=740&q=80 " alt=""></div>
+                    <div class="mt-2">Darlane Robert <br> UX Engineer</div>
+                </div>
+               <div class="border p-5 px-11">
+                    4
+                    <div class="flex w-[100px] gap-2 mt-2 bg-green-100 p-1 rounded-lg">
+                        <div class=""><i class="fa-regular fa-circle-check"></i></div>
+                        <div class="">8 Hours</div>
+                    </div>
+                </div>
+                 <div class="border p-5 px-11">
+                    5
+                    <div class="flex w-[100px] gap-2 mt-2 bg-orange-100 p-1 rounded-lg">
+                        <div class=""><i class="fa-solid fa-circle-exclamation"></i></div>
+                        <div class="">5h 17mn</div>
+                    </div>
+                </div>
+                 <div class="border p-5 px-11">
+                    6
+                    <div class="flex w-[100px] gap-2 mt-2 bg-orange-100 p-1 rounded-lg">
+                        <div class=""><i class="fa-solid fa-circle-exclamation"></i></div>
+                        <div class="">5h 17mn</div>
+                    </div>
+                </div>
+               <div class="border p-5 px-11">
+                    7
+                    <div class="flex w-[100px] gap-2 mt-2 bg-purple-100 p-1 rounded-lg">
+                        <div class=""><i class="fa-regular fa-face-frown"></i></div>
+                        <div class="">Leave</div>
+                    </div>
+                </div>
+                <div class="border p-5 px-11">
+                    8
+                    <div class="flex w-[100px] gap-2 mt-2 bg-green-100 p-1 rounded-lg">
+                        <div class=""><i class="fa-regular fa-circle-check"></i></div>
+                        <div class="">Active</div>
+                    </div>
+                </div>
+                <div class="border p-5 px-14">
+                    9
+                    <div class="flex w-[100px] gap-2 mt-2 bg-white p-1 rounded-lg">
+                    </div>
+                </div>
+                <div class=" p-5 px-11">
+                    10
+                    <div class="flex w-[100px] gap-2 mt-2 bg-white p-1 rounded-lg">
+                        
+                    </div>
+                </div>
             </div>
 
+            <div class="border"></div>
         </div>
     </div>
     
