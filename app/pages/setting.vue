@@ -106,7 +106,7 @@ const deleteEmployee = () => {
   showDeleteModal.value = false
   deletingEmployee.value = null
 }
->>>>>>> main
+
 </script>
 
 <template>

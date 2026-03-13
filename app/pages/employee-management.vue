@@ -1,7 +1,7 @@
 <script setup>
 
 
-import Appsidebar from '~/components/Appsidebar.vue';
+import AppSidebar from '~/components/AppSidebar.vue';
 import Employee from '~/components/Employee.vue';
 
 const stats = [
@@ -16,11 +16,11 @@ const stats = [
     <div class="flex overly">
 
 
-        <Appsidebar />
+        <AppSidebar />
         <div class="mt-6 p-6 w-full ">
             <div class="w-full flex">
                 <div class="w-[500px] ">
-                    <h2 class="text-3xl font-syne font-bold text-5xl tracking-tighter">
+                    <h2 class=" font-syne font-bold text-5xl tracking-tighter">
                         Employee Management
                     </h2>
                 </div>
