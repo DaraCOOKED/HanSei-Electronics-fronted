@@ -1,17 +1,20 @@
 <script setup>
-import Appsidebar from '~/components/Appsidebar.vue';
-import Employee from '~/components/Employee.vue';
+import { ref } from 'vue'
+import Appsidebar from '~/components/AppSidebar.vue'
+import Employee from '~/components/Employee.vue'
+
+const searchQuery = ref('')
+const selectedValue = ref('')
 
 const stats = [
   { val: '12', lab: 'Total Employees', percent: 100 },
-  { val: '9',  lab: 'Active',          percent: 75  },
-  { val: '6',  lab: 'Departments',     percent: 50  },
-  { val: '3',  lab: 'New This Month',  percent: 25  }
-]
-</script>
+  { val: '9',  lab: 'Active', percent: 75 },
+  { val: '6',  lab: 'Departments', percent: 50 },
+  { val: '3',  lab: 'New This Month', percent: 25 }
+]</script>
 
 <template>
-    <div class="flex">
+    <div class="flex min-h-screen">
 
         <Appsidebar />
         <div class="mt-6 p-6 w-full ">
@@ -84,9 +87,7 @@ const stats = [
         </div>
 
         </div>
-        
+        </div>
 
         
-
-    </div>
 </template>

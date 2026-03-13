@@ -1,12 +1,21 @@
 
+<script setup>
+
+const sidebarOpen = useState('sidebarOpen')
+
+function toggleSidebar() {
+  sidebarOpen.value = !sidebarOpen.value
+}
+
+</script>
 <template>
   <header class="bg-white shadow-md h-16 flex items-center justify-between px-6">
 
     <!-- Left -->
-    <div class="flex items-center gap-4">
-      <button class="text-gray-600 hover:text-black">
-        ☰
-      </button>
+    <div class="flex items-center h- gap-4">
+         <button @click="toggleSidebar">
+    ☰
+  </button>
 
       <h1 class="text-xl font-semibold text-gray-800">
         Workforce Management
@@ -27,18 +36,6 @@
 
 
 
-      <!-- Profile -->
-      <div class="flex items-center gap-2 cursor-pointer">
-        <img
-          src="https://i.pravatar.cc/40"
-          class="w-9 h-9 rounded-full"
-        />
-        <span class="hidden md:block text-gray-700">
-          Admin
-        </span>
-      </div>
-
     </div>
   </header>
 </template>
-```
