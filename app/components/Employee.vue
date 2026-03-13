@@ -10,7 +10,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="relative overflow-hidden bg-[#a9def9] rounded-xl p-6 min-w-[300px] flex hover:bg-gray-100 transition-transform duration-400 ease-in-out hover:-translate-y-1">
+  <div class="relative overflow-hidden bg-[#a9def9] rounded-xl p-6 min-w-[280px] flex hover:bg-gray-100 transition-transform duration-400 ease-in-out hover:-translate-y-1">
     
     <!-- Content -->
     <div>

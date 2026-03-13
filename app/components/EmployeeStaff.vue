@@ -20,7 +20,7 @@ const emit = defineEmits(['edit', 'delete'])
 </script>
 
 <template>
-  <tr class="w-full flex justify-between items-center border-b border-t border-[#181b25] mt-3 transition-colors duration-150 hover:bg-[#] rounded-lg">
+  <tr class="w-full flex justify-between items-center border-b border-t border-[#181b25] mt-3 transition-colors duration-150 hover:bg-[#a9def9] rounded-lg transition-transform duration-400 ease-in-out hover:-translate-y-1">
 
     <!-- Name -->
     <td class="flex-1 min-w-[200px] px-5 py-3.5">
@@ -88,20 +88,14 @@ const emit = defineEmits(['edit', 'delete'])
         <button
           @click="emit('edit')"
           title="Edit"
-          class="w-[30px] h-[30px] rounded-[7px] border border-[#1f2330] bg-transparent
-                 text-[#5a6075] text-[0.95rem] flex items-center justify-center
-                 cursor-pointer transition-all duration-150
-                 hover:bg-[#1a2030] hover:border-[#c8f064] hover:text-[#c8f064]"
+          class="w-[30px] h-[30px] rounded-[7px] border border-[#1f2330] bg-transparent text-[#5a6075] text-[0.95rem] flex items-center justify-center cursor-pointer transition-all duration-150 hover:bg-[#1a2030] hover:border-[#c8f064] hover:text-[#c8f064]"
         >✎</button>
 
         <!-- Delete button -->
         <button
           @click="emit('delete')"
           title="Delete"
-          class="w-[30px] h-[30px] rounded-[7px] border border-[#1f2330] bg-transparent
-                 text-[#5a6075] text-[0.95rem] flex items-center justify-center
-                 cursor-pointer transition-all duration-150
-                 hover:bg-[#2a1418] hover:border-[#e05c5c] hover:text-[#e05c5c]"
+          class="w-[30px] h-[30px] rounded-[7px] border border-[#1f2330] bg-transparent text-[#5a6075] text-[0.95rem] flex items-center justify-center cursor-pointer transition-all duration-150 hover:bg-[#2a1418] hover:border-[#e05c5c] hover:text-[#e05c5c]"
         >✕</button>
 
       </div>
