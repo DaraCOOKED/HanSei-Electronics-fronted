@@ -1,8 +1,7 @@
 <script setup>
   import Appsidebar from '~/components/AppSidebar.vue'
-
 import { reactive } from 'vue'
-
+import StepIndicator from '../components/StepIndicator.vue'
 const form = reactive({
   name: '',
   email: ''
@@ -11,8 +10,6 @@ const form = reactive({
 function handleSubmit() {
   console.log(form) // { name: '...', email: '...' }
 }
- 
-const emit = defineEmits(['update:modelValue'])
 </script>
 <template>
   <div class="flex min-h-screen">
@@ -29,7 +26,10 @@ const emit = defineEmits(['update:modelValue'])
         </div>
         
        </div>
-
+       <div>
+    <StepIndicator :current="1" />  <!-- ← add this -->
+    <!-- rest of card... -->
+    </div>
       <div class="w-5xl m-auto bg-gray-100 rounded-[10px] p-8 mt-10 ">
         <div class="flex justify-between">
           <div class="">
@@ -49,6 +49,7 @@ const emit = defineEmits(['update:modelValue'])
             </button>
           </div>
         </div>
+        
         <div class="">
           <form @submit.prevent="handleSubmit" class="mt-5">
 
@@ -103,9 +104,11 @@ const emit = defineEmits(['update:modelValue'])
               <button class="bg-[#a9def9]  text-gray-900 font-bold px-5 py-2 rounded-[5px] border mr-5">
                 CLear
               </button>
+              <router-link to="/sumit-employee">
               <button class="bg-[#a9def9]  text-gray-900 font-bold px-5 py-2 rounded-[5px] border">
                Submit Request →
               </button>
+              </router-link>
             </div>
         </div>
       </div>
