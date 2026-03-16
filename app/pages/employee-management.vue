@@ -1,29 +1,33 @@
 <script setup>
-import { ref } from 'vue'
-import Appsidebar from '~/components/AppSidebar.vue'
-import Employee from '~/components/Employee.vue'
 
-const searchQuery = ref('')
-const selectedValue = ref('')
+
+
+import Appsidebar from '~/components/AppSidebar.vue';
+import Employee from '~/components/Employee.vue';
 
 const stats = [
   { val: '12', lab: 'Total Employees', percent: 100 },
-  { val: '9',  lab: 'Active', percent: 75 },
-  { val: '6',  lab: 'Departments', percent: 50 },
-  { val: '3',  lab: 'New This Month', percent: 25 }
-]</script>
+  { val: '9',  lab: 'Active',          percent: 75  },
+  { val: '6',  lab: 'Departments',     percent: 50  },
+  { val: '3',  lab: 'New This Month',  percent: 25  }
+]
+</script>
+
 
 <template>
     <div class="flex min-h-screen">
 
+
         <Appsidebar />
         <div class="mt-6 p-6 w-full ">
             <div class="w-full flex justify-between">
+
                 <div class="w-[500px] ">
                     <h2 class="text-3xl font-syne font-bold text-5xl tracking-tighter">
                         Employee Management
                     </h2>
                 </div>
+
                 <div class="flex justify-between gap-5">
                     <div class="">
                     <input v-model="searchQuery" type="search" placeholder="Search items..." class="border  p-2 rounded-[5px] hover:border-b hover:border-t" /> <ul> <li v-for="item in filteredItems" :key="item">{{ item }}</li> </ul>
@@ -45,6 +49,7 @@ const stats = [
                             + Add Employee
                         </button>
                     </div>
+
                 </div>
             </div>
             <div class="mt-1">
@@ -52,6 +57,7 @@ const stats = [
                     12 of 12 employees
                 </p>
             </div>
+
 
 
 
@@ -89,4 +95,5 @@ const stats = [
         </div>
 
         
+
 </template>
