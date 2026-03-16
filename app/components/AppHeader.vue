@@ -1,7 +1,7 @@
 
 <script setup>
 
-const sidebarOpen = useState('sidebarOpen')
+const sidebarOpen = useState('SidebarOpen')
 
 function toggleSidebar() {
   sidebarOpen.value = !sidebarOpen.value

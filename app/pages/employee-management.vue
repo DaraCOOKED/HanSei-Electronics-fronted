@@ -2,6 +2,7 @@
 
 import AppSidebar from '~/components/AppSidebar.vue';
 
+
 import Employee from '~/components/Employee.vue';
 
 const stats = [
@@ -16,10 +17,9 @@ const stats = [
 <template>
     <div class="flex min-h-screen">
 
-        <!-- Sidebar -->
-        <AppSidebar />
 
         <div class="mt-6 p-6 w-full ">
+
             <div class="w-full flex">
                 <div class="w-125 ">
                     <h2 class=" font-syne font-bold text-5xl tracking-tighter">
@@ -50,6 +50,7 @@ const stats = [
                     <button class="bg-lime-300 text-gray-900 font-bold px-5 py-2 rounded-[5px] hover: border-none">
                         + Add Employee
                     </button>
+
                 </div>
             </div>
             <div class="mt-1">
@@ -57,6 +58,7 @@ const stats = [
                     12 of 12 employees
                 </p>
             </div>
+
             <div class="container flex justify-between mt-10">
                 <Employee number="12" label="Total Employees" :percentage="100" />
                 <Employee number="9" label="Active" :percentage="75" />
@@ -86,6 +88,7 @@ const stats = [
         </div>
 
     </div>
+
 
 
 </template>
