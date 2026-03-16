@@ -1,6 +1,6 @@
 <script setup>
 
-import Appsidebar from '~/components/Appsidebar.vue';
+import AppSidebar from '~/components/AppSidebar.vue';
 
 import Employee from '~/components/Employee.vue';
 
@@ -17,10 +17,8 @@ const stats = [
     <div class="flex min-h-screen">
 
         <!-- Sidebar -->
-        <Appsidebar />
-
-
         <AppSidebar />
+
         <div class="mt-6 p-6 w-full ">
             <div class="w-full flex">
                 <div class="w-125 ">

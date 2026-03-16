@@ -1,5 +1,5 @@
 <script setup>
-import AppSidebar from '~/components/AppSidebar.vue',
+import AppSidebar from '~/components/AppSidebar.vue';
 
 import { ref, computed } from 'vue'
 
@@ -115,7 +115,7 @@ const deleteEmployee = () => {
 
 
         <!-- Sidebar -->
-        <Appsidebar />
+        <AppSidebar />
 
 
         <!-- Main content - shifts based on sidebar state -->
@@ -332,8 +332,7 @@ const deleteEmployee = () => {
                         {{ editingEmployee ? 'Edit Employee' : 'Add New Employee' }}
                     </h2>
                     <p class="text-sm text-gray-400 mb-6">
-                        {{ editingEmployee ? 'Update employee details below' : 'Fill in the details to add a new team
-                        member' }}
+                        
                     </p>
                     <div class="space-y-4">
                         <div>
