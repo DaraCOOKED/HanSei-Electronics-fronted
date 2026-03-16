@@ -1,5 +1,5 @@
 <script setup>
-const sidebarOpen = useState('sidebarOpen')
+const sidebarOpen = useState('SidebarOpen')
 </script>
 
 <template>

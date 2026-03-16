@@ -2,7 +2,7 @@
 
 
 
-import Appsidebar from '~/components/Appsidebar.vue';
+import Appsidebar from '~/components/AppSidebar.vue';
 import Employee from '~/components/Employee.vue';
 
 const stats = [
@@ -17,8 +17,7 @@ const stats = [
 <template>
     <div class="flex min-h-screen">
 
-  <!-- Sidebar -->
-  <Appsidebar />
+ 
 
 
         <Appsidebar />
@@ -89,6 +88,5 @@ const stats = [
 
   </div>
 
-</div>
    
 </template>

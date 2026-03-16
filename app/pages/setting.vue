@@ -295,4 +295,5 @@ import { ref, computed } from 'vue'
     </Teleport>
 
 <AppSidebar />
+</div>
 </template>
