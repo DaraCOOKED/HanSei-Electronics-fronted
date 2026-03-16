@@ -1,14 +1,16 @@
 <script setup>
-
-import AppSidebar from '~/components/AppSidebar.vue';
-
+import AppSidebar from '~/components/AppSidebar.vue'
 </script>
 
 <template>
     <div class="flex">
         <AppSidebar />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+<<<<<<< HEAD
+        <Appsidebar />
+=======
 
+>>>>>>> d42f5cbb1d4c008830f552815674128213ff3684
         <div class="mt-6 p-6 w-full ">
             <div class="flex justify-between">
                 <div class="w-xl ">
@@ -69,9 +71,17 @@ import AppSidebar from '~/components/AppSidebar.vue';
                 </button>
             </div>
             <div class="border mt-15"></div>
-            <div class="flex mt-5 text-xl justify-between text-center align-center">
+            <div class="flex justify-between">
                 <div class="">Employee</div>
                 <div class="">Sunday</div>
+<<<<<<< HEAD
+                <div class="">Sunday</div>
+                <div class="">Sunday</div>
+                <div class="">Sunday</div>
+                <div class="">Sunday</div>
+                <div class="">Sunday</div>
+                <div class="">Sunday</div>
+=======
                 <div class="">Monday</div>
                 <div class="">Tuesday</div>
                 <div class="">Wednesday</div>
@@ -349,9 +359,9 @@ import AppSidebar from '~/components/AppSidebar.vue';
 
                     </div>
                 </div>
+>>>>>>> d42f5cbb1d4c008830f552815674128213ff3684
             </div>
 
-            <div class="border"></div>
         </div>
     </div>
 

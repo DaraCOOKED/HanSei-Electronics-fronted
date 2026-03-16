@@ -1,23 +1,28 @@
 <script setup>
-const props = defineProps({
-  id: String,
-  name: String,
-  position: String,
-  shifttime: String,
-  starttime: String,
-  endtime: String,
-  location: String
+
+defineProps({
+    id: String,
+    name: String,
+    position: String,
+    shifttime: Date,
+    starttime: Date,
+    endtime: Date,
+    location: String,
+
 });
 </script>
 
+
 <template>
-  <tr class="border-b border-gray-200 hover:bg-gray-50">
-    <td class="p-3">{{ props.id }}</td>
-    <td class="p-3">{{ props.name }}</td>
-    <td class="p-3">{{ props.position }}</td>
-    <td class="p-3">{{ props.shifttime }}</td>
-    <td class="p-3">{{ props.starttime }}</td>
-    <td class="p-3">{{ props.endtime }}</td>
-    <td class="p-3">{{ props.location }}</td>
-  </tr>
+  <tbody>
+    <tr class="border-b border-gray-200 hover:bg-gray-50">
+      <td class="p-3">{{ id }}</td>
+      <td class="p-3">{{ name }}</td>
+      <td class="p-3">{{ position }}</td>
+      <td class="p-3">{{ shifttime }}</td>
+      <td class="p-3">{{ starttime }}</td>
+      <td class="p-3">{{ endtime }}</td>
+      <td class="p-3">{{ location }}</td>
+    </tr>
+  </tbody>
 </template>

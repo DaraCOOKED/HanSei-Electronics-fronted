@@ -1,7 +1,11 @@
 <script setup>
+<<<<<<< HEAD
+import AppSidebar from '../components/AppSidebar.vue';
+=======
 import AppSidebar from '~/components/AppSidebar.vue';
 
 import { ref, computed } from 'vue'
+>>>>>>> d42f5cbb1d4c008830f552815674128213ff3684
 
 definePageMeta({ layout: 'default' })
 
@@ -111,6 +115,10 @@ const deleteEmployee = () => {
 
 <template>
 
+<<<<<<< HEAD
+<AppSidebar />
+</div>
+=======
     <div class="min-h-screen bg-gray-50 font-['Sora',sans-serif] flex">
 
 
@@ -416,4 +424,5 @@ const deleteEmployee = () => {
         </Teleport>
     </div>
 
+>>>>>>> d42f5cbb1d4c008830f552815674128213ff3684
 </template>
