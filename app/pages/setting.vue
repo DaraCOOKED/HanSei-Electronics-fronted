@@ -6,4 +6,5 @@ import AppSidebar from '../components/AppSidebar.vue';
 <template>
 
 <AppSidebar />
+</div>
 </template>

@@ -105,11 +105,11 @@ function handleSubmit() {
             </div>
             </form>
             <div class="text-right">
-              <button class="bg-blue-500  text-gray-900 font-bold px-5 py-2 rounded-[5px]  mr-5">
+              <button class=" bg-blue-500  text-gray-900 font-bold px-5 py-2 rounded-[5px]  mr-5">
                 CLear
               </button>
               <router-link to="/sumit-employee">
-              <button class="bg-blue-500  text-gray-900 font-bold px-5 py-2 rounded-[5px] ">
+              <button class=" bg-blue-500  text-gray-900 font-bold px-5 py-2 rounded-[5px] ">
                Submit Request →
               </button>
               </router-link>
