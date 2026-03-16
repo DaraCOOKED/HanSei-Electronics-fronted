@@ -298,10 +298,10 @@ import AppSidebar from '~/components/AppSidebar.vue';
             </div>
             <div class="flex">
                 <div class="flex gap-4 border p-5">
-                    <div class="w-25 border rounded-xl "><img class="rounded-xl w-full h-full"
+                    <div class="w-15 border rounded-xl "><img class="rounded-xl w-full h-full"
                             src="https://img.freepik.com/free-photo/close-up-positive-executive-work_1098-519.jpg?semt=ais_rp_progressive&w=740&q=80 "
                             alt=""></div>
-                    <div class="mt-2">Darlane Robert <br> UX Engineer</div>
+                    <div class="mt-2">Eleanor Pena <br> UX/UI Designer</div>
                 </div>
                 <div class="border p-5 px-11">
                     4
