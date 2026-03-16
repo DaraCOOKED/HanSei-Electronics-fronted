@@ -10,7 +10,7 @@ import AppSidebar from '~/components/AppSidebar.vue';
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 
         <div class="mt-6 p-6 w-full ">
-            <div class="w-full flex justify-between">
+            <div class="flex justify-between">
                 <div class="w-xl ">
                     <h2 class="text-3xl font-mono">
                         Attendance Management
