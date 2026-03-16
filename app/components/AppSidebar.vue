@@ -60,6 +60,15 @@ const sidebarOpen = useState('sidebarOpen')
         </NuxtLink>
       </li>
 
+      <li class="hover:text-gray-400 align-center mr-5 cursor-pointer">
+        <NuxtLink to="/salary" class="flex items-center   gap-5 ">
+          <div class="w-12 h-12 border border-gray-400 rounded-xl flex items-center justify-center flex-shrink-0">
+             <icon name="heroicons:cog-8-tooth" class="text-2xl"></icon>
+          </div>
+          <span>Salary</span>
+        </NuxtLink>
+      </li>
+
 
        <li class="hover:text-gray-400 align-center mr-5 cursor-pointer">
         <NuxtLink to="/setting" class="flex items-center   gap-5 ">
