@@ -1,11 +1,9 @@
 <script setup>
-<<<<<<< HEAD
-import AppSidebar from '../components/AppSidebar.vue';
-=======
+
 import AppSidebar from '~/components/AppSidebar.vue';
 
 import { ref, computed } from 'vue'
->>>>>>> d42f5cbb1d4c008830f552815674128213ff3684
+
 
 definePageMeta({ layout: 'default' })
 
@@ -114,23 +112,14 @@ const deleteEmployee = () => {
 </script>
 
 <template>
+<div class="min-h-screen bg-gray-50 font-['Sora',sans-serif] flex">
 
-<<<<<<< HEAD
-  
-=======
-<<<<<<< HEAD
-<AppSidebar />
-</div>
-=======
->>>>>>> 08d09956e21e35aa5b4e14baddc2202440167268
-    <div class="min-h-screen bg-gray-50 font-['Sora',sans-serif] flex">
-
-
+   <AppSidebar />
 
 
         <div :class="['flex-1 flex flex-col transition-all duration-300 ease-in-out', sidebarOpen ? 'ml-64' : 'ml-16']">
 
-            <!-- Top navbar -->
+
             <nav
                 class="sticky top-0 z-30 bg-white border-b border-gray-200 px-6 py-3 flex items-center justify-between">
                 <div class="flex items-center gap-3">
@@ -418,7 +407,6 @@ const deleteEmployee = () => {
                     </div>
                 </div>
             </div>
-    </div>
+      </div>
 
->>>>>>> d42f5cbb1d4c008830f552815674128213ff3684
 </template>

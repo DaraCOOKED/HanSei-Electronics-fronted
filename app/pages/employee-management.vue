@@ -1,15 +1,14 @@
 <script setup>
 import { ref } from 'vue'
-import Appsidebar from '~/components/AppSidebar.vue'
-import Employee from '~/components/Employee.vue'
+import AppSidebar from '~/components/AppSidebar.vue'
+import Employee from '~/components/Employee.vue';
 
-import AppSidebar from '~/components/AppSidebar.vue';
-
+const employees = ref([]);
 const searchQuery = ref('')
 const selectedValue = ref('')
 
 
-import Employee from '~/components/Employee.vue';
+
 
 
 const stats = [
@@ -23,8 +22,8 @@ const stats = [
 
 <template>
     <div class="flex min-h-screen">
-
-        <div class="mt-6 p-6 w-full ">
+<AppSidebar/>
+      <div class="mt-6 p-6 w-full ">
 
             <div class="w-full flex">
                 <div class="w-125 ">
@@ -36,7 +35,7 @@ const stats = [
                     <input v-model="searchQuery" type="search" placeholder="Search items..."
                         class="border p-2 rounded-[5px] " />
                     <ul>
-                        <li v-for="item in filteredItems" :key="item">{{ item }}</li>
+                        <li v-for="item in filteredItems" :key="item">{{ stats }}</li>
                     </ul>
                 </div>
                 <div class="ml-7">
