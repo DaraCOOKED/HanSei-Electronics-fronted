@@ -1,8 +1,15 @@
 <script setup>
-
-import AppSidebar from '~/components/AppSidebar.vue';
-
+import { ref } from 'vue'
+import AppSidebar from '~/components/AppSidebar.vue'
 import Employee from '~/components/Employee.vue';
+
+const employees = ref([]);
+const searchQuery = ref('')
+const selectedValue = ref('')
+
+
+
+
 
 const stats = [
     { val: '12', lab: 'Total Employees', percent: 100 },
@@ -15,11 +22,9 @@ const stats = [
 
 <template>
     <div class="flex min-h-screen">
+<AppSidebar/>
+      <div class="mt-6 p-6 w-full ">
 
-        <!-- Sidebar -->
-        <AppSidebar />
-
-        <div class="mt-6 p-6 w-full ">
             <div class="w-full flex">
                 <div class="w-125 ">
                     <h2 class=" font-syne font-bold text-5xl tracking-tighter">
@@ -30,7 +35,7 @@ const stats = [
                     <input v-model="searchQuery" type="search" placeholder="Search items..."
                         class="border p-2 rounded-[5px] " />
                     <ul>
-                        <li v-for="item in filteredItems" :key="item">{{ item }}</li>
+                        <li v-for="item in filteredItems" :key="item">{{ stats }}</li>
                     </ul>
                 </div>
                 <div class="ml-7">
@@ -44,12 +49,15 @@ const stats = [
                         <option value="">Finance</option>
                         <option value="">HR</option>
 
+
                     </select>
                 </div>
                 <div class="ml-7">
                     <button class="bg-lime-300 text-gray-900 font-bold px-5 py-2 rounded-[5px] hover: border-none">
                         + Add Employee
                     </button>
+
+
                 </div>
             </div>
             <div class="mt-1">
@@ -57,7 +65,9 @@ const stats = [
                     12 of 12 employees
                 </p>
             </div>
+
             <div class="container flex justify-between mt-10">
+
                 <Employee number="12" label="Total Employees" :percentage="100" />
                 <Employee number="9" label="Active" :percentage="75" />
                 <Employee number="6" label="Departments" :percentage="50" />
@@ -86,6 +96,8 @@ const stats = [
         </div>
 
     </div>
+
+
 
 
 </template>

@@ -1,14 +1,12 @@
 <script setup>
-
-import AppSidebar from '~/components/AppSidebar.vue';
-
+import AppSidebar from '~/components/AppSidebar.vue'
 </script>
 
 <template>
     <div class="flex">
         <AppSidebar />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-
+ 
         <div class="mt-6 p-6 w-full ">
             <div class="flex justify-between">
                 <div class="w-xl ">
@@ -69,9 +67,10 @@ import AppSidebar from '~/components/AppSidebar.vue';
                 </button>
             </div>
             <div class="border mt-15"></div>
-            <div class="flex mt-5 text-xl justify-between text-center align-center">
+            <div class="flex justify-between">
                 <div class="">Employee</div>
                 <div class="">Sunday</div>
+
                 <div class="">Monday</div>
                 <div class="">Tuesday</div>
                 <div class="">Wednesday</div>
@@ -298,10 +297,10 @@ import AppSidebar from '~/components/AppSidebar.vue';
             </div>
             <div class="flex">
                 <div class="flex gap-4 border p-5">
-                    <div class="w-25 border rounded-xl "><img class="rounded-xl w-full h-full"
+                    <div class="w-15 border rounded-xl "><img class="rounded-xl w-full h-full"
                             src="https://img.freepik.com/free-photo/close-up-positive-executive-work_1098-519.jpg?semt=ais_rp_progressive&w=740&q=80 "
                             alt=""></div>
-                    <div class="mt-2">Darlane Robert <br> UX Engineer</div>
+                    <div class="mt-2">Eleanor Pena <br> UX/UI Designer</div>
                 </div>
                 <div class="border p-5 px-11">
                     4
@@ -349,9 +348,9 @@ import AppSidebar from '~/components/AppSidebar.vue';
 
                     </div>
                 </div>
+
             </div>
 
-            <div class="border"></div>
         </div>
     </div>
 
