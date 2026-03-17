@@ -1,9 +1,16 @@
 <script setup>
+import { ref } from 'vue'
+import Appsidebar from '~/components/AppSidebar.vue'
+import Employee from '~/components/Employee.vue'
 
 import AppSidebar from '~/components/AppSidebar.vue';
 
+const searchQuery = ref('')
+const selectedValue = ref('')
+
 
 import Employee from '~/components/Employee.vue';
+
 
 const stats = [
     { val: '12', lab: 'Total Employees', percent: 100 },
@@ -43,12 +50,14 @@ const stats = [
                         <option value="">Finance</option>
                         <option value="">HR</option>
 
+
                     </select>
                 </div>
                 <div class="ml-7">
                     <button class="bg-lime-300 text-gray-900 font-bold px-5 py-2 rounded-[5px] hover: border-none">
                         + Add Employee
                     </button>
+
 
                 </div>
             </div>
@@ -59,6 +68,7 @@ const stats = [
             </div>
 
             <div class="container flex justify-between mt-10">
+
                 <Employee number="12" label="Total Employees" :percentage="100" />
                 <Employee number="9" label="Active" :percentage="75" />
                 <Employee number="6" label="Departments" :percentage="50" />
@@ -87,6 +97,7 @@ const stats = [
         </div>
 
     </div>
+
 
 
 
