@@ -51,10 +51,10 @@ import AppSidebar from '~/components/AppSidebar.vue';
             </div>
 
             <div class="border p-4 rounded">
-                <p><b>Normal Hours:</b></p>
-                <p><b>Overtime Hours:</b></p>
-                <p><b>Normal Pay:</b> </p>
-                <p><b>Overtime Pay:</b></p>
+                <p>Normal Hours:</p>
+                <p>Overtime Hours:</p>
+                <p>Normal Pay:</p>
+                <p>Overtime Pay:</p>
 
                 <h2 class="text-xl font-bold mt-2">
                     Total Salary:
