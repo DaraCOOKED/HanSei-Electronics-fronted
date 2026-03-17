@@ -17,7 +17,6 @@ const stats = [
 <template>
     <div class="flex min-h-screen">
 
-
         <div class="mt-6 p-6 w-full ">
 
             <div class="w-full flex">
