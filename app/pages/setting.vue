@@ -1,11 +1,7 @@
 <script setup>
-<<<<<<< HEAD
-import AppSidebar from '../components/AppSidebar.vue';
-=======
 import AppSidebar from '~/components/AppSidebar.vue';
 
 import { ref, computed } from 'vue'
->>>>>>> d42f5cbb1d4c008830f552815674128213ff3684
 
 definePageMeta({ layout: 'default' })
 
@@ -26,7 +22,16 @@ const itemsPerPage = 8
 
 const departments = ['All', 'Engineering', 'Marketing', 'Finance', 'HR', 'Operations']
 
-
+const employees = ref([
+    { id: 1, name: 'Chork Bora', email: 'chorkbora@hansei.com', role: 'Front-end Developer', department: 'Engineering', status: 'Active', joined: '2023-01-15', avatar: 'CB' },
+    { id: 2, name: 'Dara Kim', email: 'dara.kim@hansei.com', role: 'UI/UX Designer', department: 'Design', status: 'Active', joined: '2023-02-20', avatar: 'DK' },
+    { id: 3, name: 'Lina Chan', email: 'lina.chan@hansei.com', role: 'Project Manager', department: 'Operations', status: 'Active', joined: '2023-03-10', avatar: 'LC' },
+    { id: 4, name: 'Sok Pisey', email: 'sok.pisey@hansei.com', role: 'Back-end Developer', department: 'Engineering', status: 'On Leave', joined: '2023-04-05', avatar: 'SP' },
+    { id: 5, name: 'Thea Sithul', email: 'thea.sithul@hansei.com', role: 'Marketing Specialist', department: 'Marketing', status: 'Active', joined: '2023-05-12', avatar: 'TS' },
+    { id: 6, name: 'Sorn Sokcheadalin', email: 'sorn.sokcheadalin@hansei.com', role: 'HR Manager', department: 'HR', status: 'Active', joined: '2023-06-18', avatar: 'SS' },
+    { id: 7, name: 'Somnang Dara', email: 'somnang.dara@hansei.com', role: 'Financial Analyst', department: 'Finance', status: 'Inactive', joined: '2023-07-22', avatar: 'SD' },
+    { id: 8, name: 'Rithy Chen', email: 'rithy.chen@hansei.com', role: 'DevOps Engineer', department: 'Engineering', status: 'Active', joined: '2023-08-30', avatar: 'RC' }
+])
 
 const newEmployee = ref({ name: '', email: '', role: '', department: 'Engineering', status: 'Active' })
 
@@ -115,10 +120,6 @@ const deleteEmployee = () => {
 
 <template>
 
-<<<<<<< HEAD
-<AppSidebar />
-</div>
-=======
     <div class="min-h-screen bg-gray-50 font-['Sora',sans-serif] flex">
 
 
@@ -424,5 +425,4 @@ const deleteEmployee = () => {
         </Teleport>
     </div>
 
->>>>>>> d42f5cbb1d4c008830f552815674128213ff3684
 </template>

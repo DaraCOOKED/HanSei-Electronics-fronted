@@ -1,192 +1,128 @@
 <script setup>
-import { ref } from 'vue'
-import Appsidebar from '~/components/AppSidebar.vue'
+import { ref, computed } from 'vue'
+import AppSidebar from '~/components/AppSidebar.vue'
 import Employee from '~/components/Employee.vue'
-
-import AppSidebar from '~/components/AppSidebar.vue';
 
 const searchQuery = ref('')
 const selectedValue = ref('')
 
+const employees = ref([
+  { picture: '', name: 'Bora', email: 'chorkbora4@gmail.com', department: 'engineering', role: 'Lead Engineer', salary: '130,000', status: 'active' },
+  { picture: '', name: 'Sthurl', email: 'chorkbora4@gmail.com', department: 'engineering', role: 'Senior Engineer', salary: '320,000', status: 'active' },
+  { picture: '', name: 'Dara', email: 'chorkbora4@gmail.com', department: 'design', role: 'UI Designer', salary: '420,000', status: 'active' },
+  { picture: '', name: 'Dalin', email: 'chorkbora4@gmail.com', department: 'marketing', role: 'Marketing Manager', salary: '520,000', status: 'inactive' },
+  { picture: '', name: 'Chork Bora', email: 'chorkbora4@gmail.com', department: 'finance', role: 'Financial Analyst', salary: '150,000', status: 'active' },
+  { picture: '', name: 'Bora', email: 'chorkbora4@gmail.com', department: 'hr', role: 'HR Specialist', salary: '160,000', status: 'active' },
+  { picture: '', name: 'Bora', email: 'chorkbora4@gmail.com', department: 'engineering', role: 'DevOps Engineer', salary: '320,000', status: 'onleave' },
+  { picture: '', name: 'Bora', email: 'chorkbora4@gmail.com', department: 'product', role: 'Product Manager', salary: '250,000', status: 'active' }
+])
 
-import Employee from '~/components/Employee.vue';
+const filteredEmployees = computed(() => {
+  let filtered = employees.value
 
-<<<<<<< HEAD
-=======
-const stats = [
-    { val: '12', lab: 'Total Employees', percent: 100 },
-    { val: '9', lab: 'Active', percent: 75 },
-    { val: '6', lab: 'Departments', percent: 50 },
-    { val: '3', lab: 'New This Month', percent: 25 }
-]
+  if (searchQuery.value) {
+    filtered = filtered.filter(emp =>
+      emp.name.toLowerCase().includes(searchQuery.value.toLowerCase()) ||
+      emp.email.toLowerCase().includes(searchQuery.value.toLowerCase()) ||
+      emp.role.toLowerCase().includes(searchQuery.value.toLowerCase())
+    )
+  }
+
+  if (selectedValue.value) {
+    filtered = filtered.filter(emp => emp.department === selectedValue.value)
+  }
+
+  return filtered
+})
+
+const stats = computed(() => {
+  const total = employees.value.length
+  const active = employees.value.filter(emp => emp.status === 'active').length
+  const departments = new Set(employees.value.map(emp => emp.department)).size
+  const newThisMonth = employees.value.filter(emp => emp.status === 'active').length // Assuming active are new, adjust logic as needed
+
+  return [
+    { val: total.toString(), lab: 'Total Employees', percent: 100 },
+    { val: active.toString(), lab: 'Active', percent: (active / total) * 100 },
+    { val: departments.toString(), lab: 'Departments', percent: (departments / 6) * 100 }, // Assuming max 6 departments
+    { val: newThisMonth.toString(), lab: 'New This Month', percent: (newThisMonth / total) * 100 }
+  ]
+})
+
+const editEmployee = (emp) => {
+  // TODO: Implement edit functionality
+  console.log('Edit employee:', emp)
+}
+
+const deleteEmployee = (emp) => {
+  // TODO: Implement delete functionality
+  console.log('Delete employee:', emp)
+}
 </script>
->>>>>>> d42f5cbb1d4c008830f552815674128213ff3684
-
-const stats = [
-    { val: '12', lab: 'Total Employees', percent: 100 },
-    { val: '9', lab: 'Active', percent: 75 },
-    { val: '6', lab: 'Departments', percent: 50 },
-    { val: '3', lab: 'New This Month', percent: 25 }
-]</script>
 
 <template>
     <div class="flex min-h-screen">
-
-
-        <div class="mt-6 p-6 w-full ">
+        <AppSidebar />
+        <div class="mt-6 p-6 w-full">
 
             <div class="w-full flex">
-                <div class="w-125 ">
-                    <h2 class=" font-syne font-bold text-5xl tracking-tighter">
+                <div class="w-125">
+                    <h2 class="font-syne font-bold text-5xl tracking-tighter">
                         Employee Management
                     </h2>
                 </div>
-                <div class="ml-30">
-                    <input v-model="searchQuery" type="search" placeholder="Search items..."
-                        class="border p-2 rounded-[5px] " />
-                    <ul>
-                        <li v-for="item in filteredItems" :key="item">{{ item }}</li>
-                    </ul>
+                <div class="flex justify-between gap-5">
+                <div class="">
+                    <input v-model="searchQuery" type="search" placeholder="Search employees..."
+                        class="border p-2 rounded-[5px] hover:border-b hover:border-t" />
                 </div>
-                <div class="ml-7">
+                <div class="">
                     <select id="" v-model="selectedValue"
                         class="bg-lime-300 rounded-[5px] text-gray-900 font-bold px-5 py-2.5">
                         <option value="">All Departments</option>
-                        <option value="">Engineering</option>
-                        <option value="">Design</option>
-                        <option value="">Product</option>
-                        <option value="">Marketing</option>
-                        <option value="">Finance</option>
-                        <option value="">HR</option>
-
-<<<<<<< HEAD
-                <div class="flex justify-between gap-5">
+                        <option value="engineering">Engineering</option>
+                        <option value="design">Design</option>
+                        <option value="product">Product</option>
+                        <option value="marketing">Marketing</option>
+                        <option value="finance">Finance</option>
+                        <option value="hr">HR</option>
+                    </select>
+                </div>
                     <div class="">
-                        <input v-model="searchQuery" type="search" placeholder="Search items..."
-                            class="border  p-2 rounded-[5px] hover:border-b hover:border-t" />
-                        <ul>
-                            <li v-for="item in filteredItems" :key="item">{{ item }}</li>
-                        </ul>
-                    </div>
-                    <div class="">
-                        <select id="" type="All Departments"
-                            class="bg-300 border rounded-[5px] text-gray-400 px-5 py-2.5 hover:border-b hover:border-t">
-                            <option value="">All Departments</option>
-                            <option value="">Engineering</option>
-                            <option value="">Design</option>
-                            <option value="">Product</option>
-                            <option value="">Marketing</option>
-                            <option value="">Finance</option>
-                            <option value="">HR</option>
-
-                        </select>
-                    </div>
-                    <div class=" ">
-                        <button class="bg-[#a9def9]  text-gray-900 font-bold px-5 py-2 rounded-[5px] border">
+                        <button class="bg-[#a9def9] text-gray-900 font-bold px-5 py-2 rounded-[5px] border">
                             + Add Employee
                         </button>
                     </div>
-=======
-                    </select>
-                </div>
-                <div class="ml-7">
-                    <button class="bg-lime-300 text-gray-900 font-bold px-5 py-2 rounded-[5px] hover: border-none">
-                        + Add Employee
-                    </button>
->>>>>>> d42f5cbb1d4c008830f552815674128213ff3684
-
                 </div>
             </div>
+
             <div class="mt-1">
                 <p class="text-gray-500">
-                    12 of 12 employees
+                    {{ filteredEmployees.length }} of {{ employees.length }} employees
                 </p>
             </div>
 
             <div class="container flex justify-between mt-10">
-<<<<<<< HEAD
-                <Employee number="12" text="Total Employees" :percentage="100" />
-                <Employee number="9" text="Active" :percentage="75" />
-                <Employee number="6" text="Departments" :percentage="50" />
-                <Employee number="3" text="New This Month" :percentage="25" />
+                <Employee v-for="stat in stats" :key="stat.lab" :number="stat.val" :text="stat.lab" :percentage="stat.percent" />
             </div>
 
-            <div class="mt-15 ml-10 mr-10  rounded-[5px]">
-                <div class="flex justify-between bg-gray-300 pr-5 pl-5  rounded-[5px] pt-2 pb-2">
-                    <NuxtLink to="/NAME"
-                        class="transition-transform duration-400 ease-in-out hover:-translate-y-1 hover:border-b hover:text-blue-700 hover: font-bold font-bold">
-                        NAME</NuxtLink>
-                    <NuxtLink to="/NAME"
-                        class="transition-transform duration-400 ease-in-out hover:-translate-y-1 hover:border-b hover:text-blue-700 hover: font-bold font-bold">
-                        DEPT</NuxtLink>
-                    <NuxtLink to="/NAME"
-                        class="transition-transform duration-400 ease-in-out hover:-translate-y-1 hover:border-b hover:text-blue-700 hover: font-bold font-bold">
-                        ROLE</NuxtLink>
-                    <NuxtLink to="/NAME"
-                        class="transition-transform duration-400 ease-in-out hover:-translate-y-1 hover:border-b hover:text-blue-700 hover: font-bold font-bold">
-                        SALARY</NuxtLink>
-                    <NuxtLink to="/NAME"
-                        class="transition-transform duration-400 ease-in-out hover:-translate-y-1 hover:border-b hover:text-blue-700 hover: font-bold font-bold">
-                        STATUS</NuxtLink>
-                    <NuxtLink to="/NAME"
-                        class="transition-transform duration-400 ease-in-out hover:-translate-y-1 hover:border-b hover:text-blue-700 hover: font-bold font-bold">
-                        ACTIONS</NuxtLink>
+            <div class="mt-15 ml-10 mr-10 rounded-[5px]">
+                <div class="flex justify-between bg-gray-300 pr-5 pl-5 rounded-[5px] pt-2 pb-2">
+                    <span class="font-bold">NAME</span>
+                    <span class="font-bold">DEPT</span>
+                    <span class="font-bold">ROLE</span>
+                    <span class="font-bold">SALARY</span>
+                    <span class="font-bold">STATUS</span>
+                    <span class="font-bold">ACTIONS</span>
                 </div>
                 <div>
-                    <EmployeeStaff picture="" name="Bora" email="chorkbora4@gmail.com" department="engineering"
-                        role="Lead Engineer" salary="130,000" status="	inactive" />
-                    <EmployeeStaff picture="" name="Sthurl" email="chorkbora4@gmail.com" department="engineering"
-                        role="Lead Engineer" salary="320,000" status="	inactive" />
-                    <EmployeeStaff picture="" name="Dara" email="chorkbora4@gmail.com" department="engineering"
-                        role="Lead Engineer" salary="420,000" status="	inactive" />
-                    <EmployeeStaff picture="" name="Dalin" email="chorkbora4@gmail.com" department="engineering"
-                        role="Lead Engineer" salary="520,000" status="	inactive" />
-                    <EmployeeStaff picture="" name="Chork Bora" email="chorkbora4@gmail.com" department="engineering"
-                        role="Lead Engineer" salary="150,000" status="	inactive" />
-                    <EmployeeStaff picture="" name="Bora" email="chorkbora4@gmail.com" department="engineering"
-                        role="Lead Engineer" salary="160,000" status="	inactive" />
-                    <EmployeeStaff picture="" name="Bora" email="chorkbora4@gmail.com" department="engineering"
-                        role="Lead Engineer" salary="320,000" status="	inactive" />
-                    <EmployeeStaff picture="" name="Bora" email="chorkbora4@gmail.com" department="engineering"
-                        role="Lead Engineer" salary="250,000" status="	inactive" />
+                    <EmployeeStaff v-for="emp in filteredEmployees" :key="emp.name + emp.email"
+                        :picture="emp.picture" :name="emp.name" :email="emp.email" :department="emp.department"
+                        :role="emp.role" :salary="emp.salary" :status="emp.status"
+                        @edit="editEmployee(emp)" @delete="deleteEmployee(emp)" />
                 </div>
             </div>
 
         </div>
     </div>
-
-
-=======
-                <Employee number="12" label="Total Employees" :percentage="100" />
-                <Employee number="9" label="Active" :percentage="75" />
-                <Employee number="6" label="Departments" :percentage="50" />
-                <Employee number="3" label="New This Month" :percentage="25" />
-            </div>
-
-
-
-            <input type="search" placeholder="Search items..." class="border p-2 rounded-md" />
-
-            <select class="bg-lime-300 px-4 py-2 rounded-md font-bold">
-                <option>All Departments</option>
-            </select>
-
-            <button class="bg-lime-300 px-4 py-2 rounded-md font-bold">
-                + Add Employee
-            </button>
-        </div>
-
-        <!-- Cards -->
-        <div class="grid grid-cols-4 gap-6 mt-10">
-            <Employee number="12" label="Total Employees" :percentage="100" />
-            <Employee number="9" label="Active" :percentage="75" />
-            <Employee number="6" label="Departments" :percentage="50" />
-            <Employee number="3" label="New This Month" :percentage="25" />
-        </div>
-
-    </div>
-
-
->>>>>>> d42f5cbb1d4c008830f552815674128213ff3684
-
 </template>
