@@ -1,4 +1,5 @@
 <script setup>
+
 const sidebarOpen = useState('SidebarOpen')
 </script>
 
@@ -15,7 +16,7 @@ const sidebarOpen = useState('SidebarOpen')
       <span>Dashboard</span>
     </div>
 
-    <ul class=" flex flex-col items-center ml-11  mr-40 space-y-4">
+    <ul class=" flex flex-col items-center ml-12  mr-40 space-y-4">
       <li class="hover:text-gray-400 align-center cursor-pointer">
         <NuxtLink to="/dashboard" class="flex items-center   gap-5 ">
           <div class="w-12 h-12 border border-gray-400 rounded-xl flex items-center justify-center flex-shrink-0">
