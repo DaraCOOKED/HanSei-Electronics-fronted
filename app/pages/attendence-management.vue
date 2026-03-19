@@ -87,28 +87,28 @@ import AppSidebar from '~/components/AppSidebar.vue';
                             alt=""></div>
                     <div class="mt-2">Bora Russell <br> UX/UI Designer</div>
                 </div>
-                <div class="border p-5 px-11">
+                <div class="border p-5 px-10">
                     4
                     <div class="flex w-25 gap-2 mt-2 bg-green-100 p-1 rounded-lg">
                         <div class=""><i class="fa-regular fa-circle-check"></i></div>
                         <div class="">8 Hours</div>
                     </div>
                 </div>
-                <div class="border p-5 px-11">
+                <div class="border p-5 px-10">
                     5
                     <div class="flex w-25 gap-2 mt-2 bg-orange-100 p-1 rounded-lg">
                         <div class=""><i class="fa-solid fa-circle-exclamation"></i></div>
                         <div class="">4h 36mn</div>
                     </div>
                 </div>
-                <div class="border p-5 px-11">
+                <div class="border p-5 px-10">
                     6
                     <div class="flex w-25 gap-2 mt-2 bg-purple-100 p-1 rounded-lg">
                         <div class=""><i class="fa-regular fa-face-frown"></i></div>
                         <div class="">Leave</div>
                     </div>
                 </div>
-                <div class="border p-5 px-11">
+                <div class="border p-5 px-10">
                     7
                     <div class="flex w-25 gap-2 mt-2 bg-green-100 p-1 rounded-lg">
                         <div class=""><i class="fa-regular fa-circle-check"></i></div>
@@ -122,12 +122,12 @@ import AppSidebar from '~/components/AppSidebar.vue';
                         <div class="">Active</div>
                     </div>
                 </div>
-                <div class="border p-5 px-14">
+                <div class="border p-5 px-11">
                     9
                     <div class="flex w-25 gap-2 mt-2 bg-white p-1 rounded-lg">
                     </div>
                 </div>
-                <div class=" p-5 px-11">
+                <div class=" p-5 px-10">
                     10
                     <div class="flex w-25 gap-2 mt-2 bg-white p-1 rounded-lg">
 
@@ -141,28 +141,28 @@ import AppSidebar from '~/components/AppSidebar.vue';
                             alt=""></div>
                     <div class="mt-2">Sithul Coco <br> UX/UI Designer</div>
                 </div>
-                <div class="border p-5 px-11">
+                <div class="border p-5 px-10">
                     4
                     <div class="flex w-25 gap-2 mt-2 bg-orange-100 p-1 rounded-lg">
                         <div class=""><i class="fa-solid fa-circle-exclamation"></i></div>
                         <div class="">6h 24mn</div>
                     </div>
                 </div>
-                <div class="border p-5 px-11">
+                <div class="border p-5 px-10">
                     5
                     <div class="flex w-25 gap-2 mt-2 bg-green-100 p-1 rounded-lg">
                         <div class=""><i class="fa-regular fa-circle-check"></i></div>
                         <div class="">8h 40mn</div>
                     </div>
                 </div>
-                <div class="border p-5 px-11">
+                <div class="border p-5 px-10">
                     6
                     <div class="flex w-25 gap-2 mt-2 bg-green-100 p-1 rounded-lg">
                         <div class=""><i class="fa-regular fa-circle-check"></i></div>
                         <div class="">8 Hours</div>
                     </div>
                 </div>
-                <div class="border p-5 px-11">
+                <div class="border p-5 px-10">
                     7
                     <div class="flex w-25 gap-2 mt-2 bg-red-100 p-1 rounded-lg">
                         <div class=""><i class="fa-regular fa-circle-xmark"></i></div>
@@ -176,68 +176,14 @@ import AppSidebar from '~/components/AppSidebar.vue';
                         <div class="">Active</div>
                     </div>
                 </div>
-                <div class="border p-5 px-14">
+                <div class="border p-5 px-11">
                     9
                     <div class="flex w-25 gap-2 mt-2 bg-white p-1 rounded-lg">
                     </div>
                 </div>
-                <div class=" p-5 px-11">
+                <div class=" p-5 px-10">
                     10
                     <div class="flex w-25 gap-2 mt-2 bg-white p-1 rounded-lg">
-
-                    </div>
-                </div>
-            </div>
-            <div class="flex">
-                <div class="flex gap-4 border p-5">
-                    <div class="w-15 border rounded-xl "><img class="rounded-xl w-full h-full"
-                            src="https://st2.depositphotos.com/1594308/8523/i/450/depositphotos_85237228-stock-photo-happy-businessman-with-touchpad.jpg"
-                            alt=""></div>
-                    <div class="mt-2">Brooklyn <br>UX/UI Designer</div>
-                </div>
-                <div class="border p-5 px-11">
-                    4
-                    <div class="flex w-25 gap-2 mt-2 bg-green-100 p-1 rounded-lg">
-                        <div class=""><i class="fa-regular fa-circle-check"></i></div>
-                        <div class="">8 Hours</div>
-                    </div>
-                </div>
-                <div class="border p-5 px-11">
-                    5
-                    <div class="flex w-25 gap-2 mt-2 bg-green-100 p-1 rounded-lg">
-                        <div class=""><i class="fa-regular fa-circle-check"></i></div>
-                        <div class="">8h 15mn</div>
-                    </div>
-                </div>
-                <div class="border p-5 px-11">
-                    6
-                    <div class="flex w-25 gap-2 mt-2 bg-orange-100 p-1 rounded-lg">
-                        <div class=""><i class="fa-solid fa-circle-exclamation"></i></div>
-                        <div class="">5h 17mn</div>
-                    </div>
-                </div>
-                <div class="border p-5 px-11">
-                    7
-                    <div class="flex w-25 gap-2 mt-2 bg-green-100 p-1 rounded-lg">
-                        <div class=""><i class="fa-regular fa-circle-check"></i></div>
-                        <div class="">8 Hours</div>
-                    </div>
-                </div>
-                <div class="border p-5 px-11">
-                    8
-                    <div class="flex w-25 gap-2 mt-2 bg-purple-100 p-1 rounded-lg">
-                        <div class=""><i class="fa-regular fa-face-frown"></i></div>
-                        <div class="">Leave</div>
-                    </div>
-                </div>
-                <div class="border p-5 px-14">
-                    9
-                    <div class="flex w-25 gap-2 mt-2 bg-white p-1 rounded-lg">
-                    </div>
-                </div>
-                <div class=" p-5 px-11">
-                    10
-                    <div class="flex w-15 gap-2 mt-2 bg-white p-1 rounded-lg">
 
                     </div>
                 </div>
@@ -249,28 +195,28 @@ import AppSidebar from '~/components/AppSidebar.vue';
                             alt=""></div>
                     <div class="mt-2">Eleanor Pena <br> UX/UI Designer</div>
                 </div>
-                <div class="border p-5 px-11">
+                <div class="border p-5 px-10">
                     4
                     <div class="flex w-25 gap-2 mt-2 bg-green-100 p-1 rounded-lg">
                         <div class=""><i class="fa-regular fa-circle-check"></i></div>
                         <div class="">8h 15mn</div>
                     </div>
                 </div>
-                <div class="border p-5 px-11">
+                <div class="border p-5 px-10">
                     5
                     <div class="flex w-25 gap-2 mt-2 bg-green-100 p-1 rounded-lg">
                         <div class=""><i class="fa-regular fa-circle-check"></i></div>
                         <div class="">8h 40mn</div>
                     </div>
                 </div>
-                <div class="border p-5 px-11">
+                <div class="border p-5 px-10">
                     6
                     <div class="flex w-25 gap-2 mt-2 bg-green-100 p-1 rounded-lg">
                         <div class=""><i class="fa-regular fa-circle-check"></i></div>
                         <div class="">8h 23mn</div>
                     </div>
                 </div>
-                <div class="border p-5 px-11">
+                <div class="border p-5 px-10">
                     7
                     <div class="flex w-25 gap-2 mt-2 bg-orange-100 p-1 rounded-lg">
                         <div class=""><i class="fa-solid fa-circle-exclamation"></i></div>
@@ -284,12 +230,12 @@ import AppSidebar from '~/components/AppSidebar.vue';
                         <div class="">Active</div>
                     </div>
                 </div>
-                <div class="border p-5 px-14">
+                <div class="border p-5 px-11">
                     9
                     <div class="flex w-25 gap-2 mt-2 bg-white p-1 rounded-lg">
                     </div>
                 </div>
-                <div class=" p-5 px-11">
+                <div class=" p-5 px-10">
                     10
                     <div class="flex w-25 gap-2 mt-2 bg-white p-1 rounded-lg">
 
@@ -303,28 +249,28 @@ import AppSidebar from '~/components/AppSidebar.vue';
                             alt=""></div>
                     <div class="mt-2">Eleanor Pena <br> UX/UI Designer</div>
                 </div>
-                <div class="border p-5 px-11">
+                <div class="border p-5 px-10">
                     4
                     <div class="flex w-25 gap-2 mt-2 bg-green-100 p-1 rounded-lg">
                         <div class=""><i class="fa-regular fa-circle-check"></i></div>
                         <div class="">8 Hours</div>
                     </div>
                 </div>
-                <div class="border p-5 px-11">
+                <div class="border p-5 px-10">
                     5
                     <div class="flex w-25 gap-2 mt-2 bg-orange-100 p-1 rounded-lg">
                         <div class=""><i class="fa-solid fa-circle-exclamation"></i></div>
                         <div class="">5h 17mn</div>
                     </div>
                 </div>
-                <div class="border p-5 px-11">
+                <div class="border p-5 px-10">
                     6
                     <div class="flex w-25 gap-2 mt-2 bg-orange-100 p-1 rounded-lg">
                         <div class=""><i class="fa-solid fa-circle-exclamation"></i></div>
                         <div class="">5h 17mn</div>
                     </div>
                 </div>
-                <div class="border p-5 px-11">
+                <div class="border p-5 px-10">
                     7
                     <div class="flex w-25 gap-2 mt-2 bg-purple-100 p-1 rounded-lg">
                         <div class=""><i class="fa-regular fa-face-frown"></i></div>
@@ -338,12 +284,12 @@ import AppSidebar from '~/components/AppSidebar.vue';
                         <div class="">Active</div>
                     </div>
                 </div>
-                <div class="border p-5 px-14">
+                <div class="border p-5 px-11">
                     9
                     <div class="flex w-25 gap-2 mt-2 bg-white p-1 rounded-lg">
                     </div>
                 </div>
-                <div class=" p-5 px-11">
+                <div class=" p-5 px-10">
                     10
                     <div class="flex w-25 gap-2 mt-2 bg-white p-1 rounded-lg">
 
