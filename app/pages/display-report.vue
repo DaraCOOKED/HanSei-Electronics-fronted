@@ -13,7 +13,7 @@
             </div>
             <div class="border mt-10 "></div>
              <div class="container flex justify-between mt-10 gap-10">
-                <ReportCard -text="OVERALL PROGRESS" -number="68%" -description="+6 from last week" />
+                <ReportCard -text="OVERALL PROGRESS" -number="68%" -description="+6 from last week"/>
                 <ReportCard -text="TASKS DONE" -number="34" -description="of 50 total tasks" />
                 <ReportCard -text="DAY LEFT" -number="22" -description="deadline Apr 7,2026" />
                 <ReportCard -text="OPEN RISKS" -number="3" -description="1 high . 2 medium" />
@@ -36,7 +36,7 @@
                     <div class="flex justify-between mt-4">
                         <p class="text-gray-500">Start Date</p>
                         <p class="">Jan 6,2026</p>
-                    </div>
+                    </div>class="text-blue-500"
                     <div class="flex justify-between mt-4">
                         <p class="text-gray-500">Target End </p>
                         <p class="">Apr 7,2026</p>
@@ -51,23 +51,23 @@
                     <div class="border mt-5"></div>
                     <div class="flex justify-between mt-4">
                         <p class="text-gray-500">Discovery</p>
-                        <p class="border px-3 rounded-sm bg-blue-200">Complete</p>
+                        <p class="border px-3 rounded-sm bg-blue-200 text-blue-600">Complete</p>
                     </div>
                     <div class="flex justify-between mt-4">
                         <p class="text-gray-500">Architecture</p>
-                        <p class="border px-3 rounded-sm bg-blue-200">Complete</p>
+                        <p class="border px-3 rounded-sm bg-blue-200 text-blue-600">Complete</p>
                     </div>
                     <div class="flex justify-between mt-4">
                         <p class="text-gray-500">Development</p>
-                        <p class="border px-3 rounded-sm bg-green-200">On Truck</p>
+                        <p class="border px-3 rounded-sm bg-green-200 text-green-600">On Truck</p>
                     </div>
                     <div class="flex justify-between mt-4">
                         <p class="text-gray-500"> QA & Testing </p>
-                        <p class="border px-3 rounded-sm bg-yellow-200">At Risk</p>
+                        <p class="border px-3 rounded-sm bg-yellow-200 text-yellow-600">At Risk</p>
                     </div>
                     <div class="flex justify-between mt-4">
                         <p class="text-gray-500">Deployment</p>
-                        <p class="border px-3 rounded-sm bg-gray-200">upcoming</p>    
+                        <p class="border px-3 rounded-sm bg-gray-200 text-gray-500">upcoming</p>    
                     </div>
                 </div>
             </div>
@@ -76,8 +76,8 @@
                     <div class="mt-4">
                         <Percentage title="Backend API" -description="REST endpoints, authentication, database layer" :percentage="90" status="on-track"/>
                         <Percentage title="Frontend Dashboard" -description="React UI components, routing, state management" :percentage="72" status="on-track"/>
-                        <Percentage title="Data Pipeline" -description="ETL jobs, data transformation, warehouse sync" :percentage="55" status="on-track"/>
-                        <Percentage title="Data Pipeline" -description="Unit tests, integration tests, E2E coverage" :percentage="35" status="on-track"/>
+                        <Percentage title="Data Pipeline" -description="ETL jobs, data transformation, warehouse sync" :percentage="55" status="at-risk"/>
+                        <Percentage title="Data Pipeline" -description="Unit tests, integration tests, E2E coverage" :percentage="35" status="delayed"/>
                     </div>
             </div>
             <div class="">
@@ -129,14 +129,14 @@
                 <div class="border p-5 w-[49%] rounded-lg">
                     <div class="flex justify-between mb-3">
                         <p class="">Deployment</p>
-                        <p class="border px-3 rounded-sm bg-red-400">high</p>   
+                        <p class="border px-3 rounded-sm bg-red-200 text-red-800">high</p>   
                     </div>
                     <span class="text-sm">ETL jobs running 2 weeks behind schedule. May impact QA start date. Mitigation: 2 engineers re-assigned.</span> 
                 </div>
                 <div class="border p-5 w-[49%] rounded-lg">
                     <div class="flex justify-between mb-3">
                         <p class="">QA Resource Gap</p>
-                        <p class="border px-3 rounded-sm bg-yellow-400">medium</p>   
+                        <p class="border px-3 rounded-sm bg-yellow-200 text-yellow-800">medium</p>   
                     </div>
                     <span class="text-sm">Only 1 QA engineer available during final sprint. Requesting external contractor by March 20.</span> 
                 </div>
@@ -145,14 +145,14 @@
                 <div class="border p-5 w-[49%] rounded-lg">
                     <div class="flex justify-between mb-3">
                         <p class="">Third-party API Changes</p>
-                        <p class="border px-3 rounded-sm bg-yellow-400">medium</p>   
+                        <p class="border px-3 rounded-sm bg-yellow-200 text-yellow-800">medium</p>   
                     </div>
                     <span class="text-sm">Vendor v3 API migration required before launch. Compatibility layer in progress, ETA March 22.</span> 
                 </div>
                 <div class="border p-5 w-[49%] rounded-lg">
                     <div class="flex justify-between mb-3">
                         <p class="">Performance Benchmarks</p>
-                        <p class="border px-3 rounded-sm bg-blue-400">Monitoring</p>   
+                        <p class="border px-3 rounded-sm bg-blue-200 text-blue-800">Monitoring</p>   
                     </div>
                     <span class="text-sm">Load testing scheduled for March 28. Current staging performance meets 85% of SLA targets.</span> 
                 </div>

@@ -21,9 +21,9 @@ const barColor = computed(() => {
 
 const statusStyle = computed(() => {
   switch (props.status) {
-    case 'on-track': return 'bg-[#00e5a0] text-[#0d0f14]'
-    case 'at-risk':  return 'bg-[#f5a623] text-[#0d0f14]'
-    case 'delayed':  return 'bg-[#e05c5c] text-white'
+    case 'on-track': return 'bg-green-200 text-green-500'
+    case 'at-risk':  return 'bg-yellow-200 text-yellow-500'
+    case 'delayed':  return 'bg-red-200 text-red-500'
     default:         return 'bg-[#00e5a0] text-[#0d0f14]'
   }
 })
