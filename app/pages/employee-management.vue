@@ -18,7 +18,7 @@ const stats = [
     { val: '3', lab: 'New This Month', percent: 25 }
 ]
 </script>
-
+    
 
 <template>
     <div class="flex min-h-screen">
