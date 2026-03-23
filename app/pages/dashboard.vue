@@ -54,9 +54,9 @@ new Chart(ctx2, {
     </ol>
     <div class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
 
-      <div class="rounded-lg bg-blue-600 text-white shadow">
+      <div class="rounded-lg bg-blue-300 text-white shadow">
         <div class="p-5 text-lg font-semibold">Total Employees</div>
-        <div class="flex items-center justify-between border-t border-blue-500 px-5 py-3">
+        <div class="flex items-center justify-between border-t bg-blue-300 px-5 py-3">
         <NuxtLink to="/attendence-management" class="text-sm hover:underline">
             View Employee List
         </NuxtLink>
@@ -65,9 +65,9 @@ new Chart(ctx2, {
       </div>
 
     
-      <div class="rounded-lg bg-yellow-500 text-white shadow">
+      <div class="rounded-lg bg-blue-300 text-white shadow">
         <div class="p-5 text-lg font-semibold">Today's Attendance</div>
-        <div class="flex items-center justify-between border-t border-yellow-400 px-5 py-3">
+        <div class="flex items-center justify-between border-t bg-blue-300 px-5 py-3">
           <NuxtLink to="/attendence-management" class="text-sm hover:underline">
             View Attendance Report
         </NuxtLink>
@@ -76,9 +76,9 @@ new Chart(ctx2, {
       </div>
 
       
-      <div class="rounded-lg bg-green-600 text-white shadow">
+      <div class="rounded-lg bg-blue-300 text-white shadow">
         <div class="p-5 text-lg font-semibold">Active Employees</div>
-        <div class="flex items-center justify-between border-t border-green-500 px-5 py-3">
+        <div class="flex items-center justify-between border-t bg-blue-300 px-5 py-3">
           <NuxtLink to="/attendence-management" class="text-sm hover:underline">
             View Active Staff
         </NuxtLink>
@@ -87,9 +87,9 @@ new Chart(ctx2, {
       </div>
 
 
-      <div class="rounded-lg bg-red-600 text-white shadow">
+      <div class="rounded-lg bg-blue-300 text-white shadow">
         <div class="p-5 text-lg font-semibold">Pending Leave Requests</div>
-        <div class="flex items-center justify-between border-t border-red-500 px-5 py-3">
+        <div class="flex items-center justify-between border-t bg-blue-300 px-5 py-3">
           <NuxtLink to="/attendence-management" class="text-sm hover:underline">
             Review Requests
         </NuxtLink>
