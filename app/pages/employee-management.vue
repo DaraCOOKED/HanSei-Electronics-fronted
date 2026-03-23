@@ -6,7 +6,7 @@ import Employee from '~/components/Employee.vue'
 import EmployeeStaff from '~/components/EmployeeStaff.vue'
 
 
-const employees = ref([]);
+
 const searchQuery = ref('')
 const selectedValue = ref('')
 
