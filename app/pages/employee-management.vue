@@ -64,20 +64,16 @@ const deleteEmployee = (emp) => {
   <div class="flex min-h-screen bg-gray-50">
     <AppSidebar />
 
-    <!-- Main Content -->
     <div class="flex-1 flex flex-col p-8 gap-8 overflow-auto">
 
-      <!-- ── Header ── -->
       <div class="flex items-center justify-between">
-        <!-- Title -->
         <div class="flex flex-col gap-0.5">
-          <span class="text-xs font-semibold uppercase tracking-widest text-gray-400">Dashboard</span>
+          <span class="text-xs font-semibold uppercase tracking-widest text-blue-400">Dashboard</span>
           <h2 class="font-syne font-bold text-4xl tracking-tighter text-gray-900 leading-none">
             Employee Management
           </h2>
         </div>
 
-        <!-- Controls -->
         <div class="flex items-center gap-3">
           <!-- Search -->
           <div class="relative">
@@ -120,7 +116,7 @@ const deleteEmployee = (emp) => {
 
           <!-- Add Button -->
           <button
-            class="flex items-center gap-2 bg-lime-300 hover:bg-lime-400 active:scale-95 text-gray-900
+            class="flex items-center gap-2 bg-blue-300 hover:bg-lime-400 active:scale-95 text-gray-900
                    font-bold text-sm px-5 py-2.5 rounded-lg shadow-sm hover:shadow-md transition-all duration-150"
           >
             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
