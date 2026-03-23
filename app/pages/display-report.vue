@@ -36,7 +36,7 @@
                     <div class="flex justify-between mt-4">
                         <p class="text-gray-500">Start Date</p>
                         <p class="">Jan 6,2026</p>
-                    </div>class="text-blue-500"
+                    </div>
                     <div class="flex justify-between mt-4">
                         <p class="text-gray-500">Target End </p>
                         <p class="">Apr 7,2026</p>
