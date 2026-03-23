@@ -1,11 +1,15 @@
 <script setup>
+
 import { ref, computed } from 'vue'
 import AppSidebar from '~/components/AppSidebar.vue'
 import Employee from '~/components/Employee.vue'
 import EmployeeStaff from '~/components/EmployeeStaff.vue'
 
+
+const employees = ref([]);
 const searchQuery = ref('')
 const selectedValue = ref('')
+
 
 const employees = ref([
   { picture: '', name: 'Bora', email: 'chorkbora4@gmail.com', department: 'engineering', role: 'Lead Engineer', salary: '130,000', status: 'active' },
@@ -185,9 +189,12 @@ const deleteEmployee = (emp) => {
             of <span class="font-semibold text-gray-600">{{ employees.length }}</span> employees
           </span>
           <span class="text-xs text-gray-400">Employee Management System</span>
+
         </div>
       </div>
 
     </div>
+
   </div>
+
 </template>
