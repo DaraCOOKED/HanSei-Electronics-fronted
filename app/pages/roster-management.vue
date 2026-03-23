@@ -1,4 +1,5 @@
 <script setup>
+
 import AppSidebar from "~/components/AppSidebar.vue";
 import { ref } from "vue"
 
@@ -10,13 +11,18 @@ const employees = [
     "Sok Pisey"
 ]
 
+
 </script>
 
 <template>
     <div class="flex">
+
+        <!-- leftbar -->
+
         <AppSidebar />
         <div class="mt-6 p-6 w-full">
             <h1 class="text-4xl font-bold mb-4">Roster Management</h1>
+
 
             <!-- Create Shift -->
             <div class="border p-4 mb-6 rounded">
@@ -85,9 +91,14 @@ const employees = [
 
                 </table>
 
+
             </div>
 
+
         </div>
+
     </div>
+
+
 
 </template>

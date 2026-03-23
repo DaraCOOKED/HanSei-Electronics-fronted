@@ -46,7 +46,7 @@
         
         <div class="text-center">
             <h1 class="text-3xl justify-center flex  font-bold text-gray-900">
-                <img src="" class=" absolute bottom-135 w-90">
+                HanSei Electronics
             </h1>
         </div>
 
@@ -76,8 +76,8 @@
                 v-model="password"
                 type="password"
                 required
-                placeholder="*********"
-                class="mt-1 w-full items-center align-center px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                placeholder="Password"
+                class="mt-1 w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
             />
             </div>
 
