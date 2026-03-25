@@ -80,7 +80,7 @@ const sidebarOpen = useState('SidebarOpen')
       </li>
      <div class="mt-100 ">
       <li class="hover:text-gray-400 align-center ml-10 mr-15 cursor-pointer list-none">
-        <NuxtLink to="/logout" class="flex items-center gap-5">
+        <NuxtLink to="/login" class="flex items-center gap-5">
           <div class="w-12 h-12 border border-gray-400 rounded-xl flex items-center justify-center flex-shrink-0">
             <i class="fa-solid fa-right-from-bracket text-lg"></i>
           </div>
