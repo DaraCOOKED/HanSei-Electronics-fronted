@@ -10,7 +10,7 @@ import AppSidebar from '~/components/AppSidebar.vue'
         <div class="mt-6 p-6 w-full ">
             <div class="flex justify-between">
                 <div class="w-xl ">
-                    <h2 class="text-3xl font-mono">
+                    <h2 class="text-4xl font-bold mb-4">
                         Attendance Management
                     </h2>
                     <p>Analya attendance record of employee</p>

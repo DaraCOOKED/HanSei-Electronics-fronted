@@ -34,7 +34,7 @@ import AppSidebar from '~/components/AppSidebar.vue';
         <AppSidebar />
 
         <div class="mt-6 p-6 w-full ">
-            <h1 class="text-3xl font-bold mb-4">Salary & OT Calculation</h1>
+            <h1 class="text-4xl font-bold mb-4">Salary & OT Calculation</h1>
 
             <div class="border p-4 rounded mb-6">
 
@@ -42,7 +42,9 @@ import AppSidebar from '~/components/AppSidebar.vue';
 
                 <input type="number" placeholder="Hours Worked" class="border p-2 mr-2" />
 
-                <input type="number" placeholder="Hourly Rate" class="border p-2 mr-2" />
+                <input type="number" placeholder="leave" class="border p-2 mr-2" />
+
+                <input type="number" placeholder="Overtime" class="border p-2 mr-2" />
 
                 <button class="bg-blue-500 text-white px-4 py-2 rounded">
                     Calculate
@@ -51,9 +53,9 @@ import AppSidebar from '~/components/AppSidebar.vue';
             </div>
 
             <div class="border p-4 rounded">
-                <p>Normal Hours:</p>
+                <p>Hours work:</p>
                 <p>Overtime Hours:</p>
-                <p>Normal Pay:</p>
+                <p>Leave Pay:</p>
                 <p>Overtime Pay:</p>
 
                 <h2 class="text-xl font-bold mt-2">

@@ -27,7 +27,7 @@ const stats = [
 
             <div class="w-full flex">
                 <div class="w-125 ">
-                    <h2 class=" font-syne font-bold text-5xl tracking-tighter">
+                    <h2 class=" text-4xl font-bold mb-4">
                         Employee Management
                     </h2>
                 </div>
