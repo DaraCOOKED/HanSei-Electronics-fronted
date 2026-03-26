@@ -44,57 +44,56 @@ onMounted(() => {
 
 
 <template>
-  <div class="flex">
-    <AppSidebar />
 
-    <div class="mt-6 p-6 w-full">
-      <h1 class="text-4xl font-bold mb-4 ">Dashboard</h1>
-      <ol class="breadcrumb mb-4">
-        <li class="breadcrumb-item active">Dashboard</li>
-      </ol>
-      <div class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
+    <div class="flex min-h-screen">
+        <AppSidebar />
+        
+  <div class="container-fluid px-4 w-full ">
+    <h1 class="mt-4 colo-black text-5xl ">Dashboard</h1>
+    <ol class="breadcrumb mb-4">
+      <li class="breadcrumb-item active">Dashboard</li>
+    </ol>
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
 
-        <div class="rounded-lg bg-blue-600 text-white shadow">
-          <div class="p-5 text-lg font-semibold">Total Employees</div>
-          <div class="flex items-center justify-between border-t border-blue-500 px-5 py-3">
-            <NuxtLink to="/attendence-management" class="text-sm hover:underline">
-              View Employee List
-            </NuxtLink>
-            <span class="text-lg">›</span>
-          </div>
+      <div class="rounded-lg bg-blue-300 text-white shadow">
+        <div class="p-5 text-lg font-semibold">Total Employees</div>
+        <div class="flex items-center justify-between border-t bg-blue-300 px-5 py-3">
+        <NuxtLink to="/attendence-management" class="text-sm hover:underline">
+            View Employee List
+        </NuxtLink>
+
         </div>
 
 
-        <div class="rounded-lg bg-yellow-500 text-white shadow">
-          <div class="p-5 text-lg font-semibold">Today's Attendance</div>
-          <div class="flex items-center justify-between border-t border-yellow-400 px-5 py-3">
-            <NuxtLink to="/attendence-management" class="text-sm hover:underline">
-              View Attendance Report
-            </NuxtLink>
-            <span class="text-lg">›</span>
-          </div>
+    
+      <div class="rounded-lg bg-blue-300 text-white shadow">
+        <div class="p-5 text-lg font-semibold">Today's Attendance</div>
+        <div class="flex items-center justify-between border-t bg-blue-300 px-5 py-3">
+          <NuxtLink to="/attendence-management" class="text-sm hover:underline">
+            View Attendance Report
+        </NuxtLink>
+          <span class="text-lg">›</span>
         </div>
 
 
-        <div class="rounded-lg bg-green-600 text-white shadow">
-          <div class="p-5 text-lg font-semibold">Active Employees</div>
-          <div class="flex items-center justify-between border-t border-green-500 px-5 py-3">
-            <NuxtLink to="/attendence-management" class="text-sm hover:underline">
-              View Active Staff
-            </NuxtLink>
-            <span class="text-lg">›</span>
-          </div>
+      <div class="rounded-lg bg-blue-300 text-white shadow">
+        <div class="p-5 text-lg font-semibold">Active Employees</div>
+        <div class="flex items-center justify-between border-t bg-blue-300 px-5 py-3">
+          <NuxtLink to="/attendence-management" class="text-sm hover:underline">
+            View Active Staff
+        </NuxtLink>
+          <span class="text-lg">›</span>
         </div>
 
 
-        <div class="rounded-lg bg-red-600 text-white shadow">
-          <div class="p-5 text-lg font-semibold">Pending Leave Requests</div>
-          <div class="flex items-center justify-between border-t border-red-500 px-5 py-3">
-            <NuxtLink to="/attendence-management" class="text-sm hover:underline">
-              Review Requests
-            </NuxtLink>
-            <span class="text-lg">›</span>
-          </div>
+
+      <div class="rounded-lg bg-blue-300 text-white shadow">
+        <div class="p-5 text-lg font-semibold">Pending Leave Requests</div>
+        <div class="flex items-center justify-between border-t bg-blue-300 px-5 py-3">
+          <NuxtLink to="/attendence-management" class="text-sm hover:underline">
+            Review Requests
+        </NuxtLink>
+          <span class="text-lg">›</span>
         </div>
       </div>
       <div class="grid grid-cols-1 xl:grid-cols-2 gap-6 mt-6">

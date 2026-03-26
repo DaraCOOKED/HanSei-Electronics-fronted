@@ -1,10 +1,16 @@
 <script setup>
+import axios from 'axios'
 const form = ref({
   name: '',
   email: '',
   password: '',
   confirmPassword: ''
 })
+
+definePageMeta({
+  layout: false
+})
+
 
 const isLoading = ref(false)
 
@@ -16,15 +22,23 @@ const handleRegister = async () => {
 
   isLoading.value = true
   try {
- 
-definePageMeta({
-  layout: 'blank' // This switches the layout ONLY for this page
-})
+    const response = await axios.post('http://127.0.0.1:8000/api/register', {
+      name: form.value.name,
+      email: form.value.email,
+      password: form.value.password,
+      password_confirmation: form.value.confirmPassword
+    })
 
-    console.log('Registering user:', form.value)
+    // Save token
+    const cookie = useCookie('token')
+    cookie.value = response.data.token
+
+    // Go to dashboard
+    navigateTo('/login')
 
   } catch (err) {
     console.error('Registration error:', err)
+    alert(err.response?.data?.message || 'Registration failed!')
   } finally {
     isLoading.value = false
   }
