@@ -1,8 +1,8 @@
 <script setup>
-import { ref, computed } from "vue"
-import AppSidebar from "~/components/AppSidebar.vue"
+import AppSidebar from '~/components/AppSidebar.vue';
 
-const sidebarOpen = useState('SidebarOpen', () => true)
+import { ref, computed } from 'vue'
+
 
 const employees = ref([
   { id: 1, name: "Chork Bora", email: "bora@mail.com", department: "IT", status: "Active" },
@@ -22,7 +22,26 @@ const showDeleteModal = ref(false)
 const editingEmployee = ref(null)
 const deletingEmployee = ref(null)
 
-const form = ref({ name: "", email: "", department: "IT", status: "Active" })
+const employees = ref([
+    { id: 1, name: 'Chork Bora', email: 'chorkbora@hansei.com', role: 'Front-end Developer', department: 'Engineering', status: 'Active', joined: '2023-01-15', avatar: 'CB' },
+    { id: 2, name: 'Dara Kim', email: 'dara.kim@hansei.com', role: 'UI/UX Designer', department: 'Design', status: 'Active', joined: '2023-02-20', avatar: 'DK' },
+    { id: 3, name: 'Lina Chan', email: 'lina.chan@hansei.com', role: 'Project Manager', department: 'Operations', status: 'Active', joined: '2023-03-10', avatar: 'LC' },
+    { id: 4, name: 'Sok Pisey', email: 'sok.pisey@hansei.com', role: 'Back-end Developer', department: 'Engineering', status: 'On Leave', joined: '2023-04-05', avatar: 'SP' },
+    { id: 5, name: 'Thea Sithul', email: 'thea.sithul@hansei.com', role: 'Marketing Specialist', department: 'Marketing', status: 'Active', joined: '2023-05-12', avatar: 'TS' },
+    { id: 6, name: 'Sorn Sokcheadalin', email: 'sorn.sokcheadalin@hansei.com', role: 'HR Manager', department: 'HR', status: 'Active', joined: '2023-06-18', avatar: 'SS' },
+    { id: 7, name: 'Somnang Dara', email: 'somnang.dara@hansei.com', role: 'Financial Analyst', department: 'Finance', status: 'Inactive', joined: '2023-07-22', avatar: 'SD' },
+    { id: 8, name: 'Rithy Chen', email: 'rithy.chen@hansei.com', role: 'DevOps Engineer', department: 'Engineering', status: 'Active', joined: '2023-08-30', avatar: 'RC' }
+])
+
+const newEmployee = ref({ name: '', email: '', role: '', department: 'Engineering', status: 'Active' })
+
+const stats = computed(() => ({
+    total: employees.value.length,
+    active: employees.value.filter(e => e.status === 'Active').length,
+    onLeave: employees.value.filter(e => e.status === 'On Leave').length,
+    inactive: employees.value.filter(e => e.status === 'Inactive').length,
+}))
+
 
 const filtered = computed(() => {
   return employees.value.filter(e => {
@@ -89,7 +108,43 @@ function statusStyle(status) {
   <div class="flex">
     <AppSidebar />
 
-    <div class="flex-1 px-6 py-8">
+    <div class="min-h-screen bg-gray-50 font-['Sora',sans-serif] flex">
+
+
+        <!-- Sidebar -->
+        <AppSidebar />
+
+
+        <!-- Main content - shifts based on sidebar state -->
+        <div :class="['flex-1 flex flex-col transition-all duration-300 ease-in-out', sidebarOpen ? 'ml-64' : 'ml-16']">
+
+            <!-- Top navbar -->
+            <nav
+                class="sticky top-0 z-30 bg-white border-b border-gray-200 px-6 py-3 flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <!-- Hamburger toggle -->
+                    <button @click="sidebarOpen = !sidebarOpen"
+                        class="p-2 rounded-lg text-gray-400 hover:text-gray-700 hover:bg-gray-100 transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                    <span class="text-sm font-semibold text-gray-400 tracking-widest uppercase hidden sm:block">
+                        Employee Management
+                    </span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <div
+                        class="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white text-xs font-bold">
+                        AD</div>
+                    <span class="text-sm font-medium text-gray-700 hidden sm:block">Admin</span>
+                </div>
+            </nav>
+
+            <!-- Page content -->
+            <div class="flex-1 px-6 py-8">
+
 
       <!-- Header -->
       <div class="flex items-center justify-between mb-6">
@@ -198,60 +253,6 @@ function statusStyle(status) {
       </div>
 
     </div>
-  </div>
 
-  <!-- Add / Edit Modal -->
-  <div v-if="showAddModal" class="fixed inset-0 z-50 flex items-center justify-center p-4">
-    <div class="absolute inset-0 bg-black/40" @click="showAddModal = false"></div>
-    <div class="relative bg-white rounded-xl shadow-xl w-full max-w-md p-6 z-10">
-      <h2 class="text-lg font-bold text-gray-900 mb-4">{{ editingEmployee ? 'Edit Employee' : 'Add Employee' }}</h2>
-      <div class="space-y-3">
-        <div>
-          <label class="block text-xs font-medium text-gray-600 mb-1">Full Name</label>
-          <input v-model="form.name" type="text" class="w-full px-3 py-2 border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
-        </div>
-        <div>
-          <label class="block text-xs font-medium text-gray-600 mb-1">Email</label>
-          <input v-model="form.email" type="email" class="w-full px-3 py-2 border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
-        </div>
-        <div class="grid grid-cols-2 gap-3">
-          <div>
-            <label class="block text-xs font-medium text-gray-600 mb-1">Department</label>
-            <select v-model="form.department" class="w-full px-3 py-2 border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white">
-              <option v-for="d in departments.filter(d => d !== 'All')" :key="d">{{ d }}</option>
-            </select>
-          </div>
-          <div>
-            <label class="block text-xs font-medium text-gray-600 mb-1">Status</label>
-            <select v-model="form.status" class="w-full px-3 py-2 border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white">
-              <option>Active</option>
-              <option>On Leave</option>
-              <option>Inactive</option>
-            </select>
-          </div>
-        </div>
-      </div>
-      <div class="flex gap-3 mt-6">
-        <button @click="showAddModal = false" class="flex-1 py-2 border rounded-lg text-sm text-gray-600 hover:bg-gray-50">Cancel</button>
-        <button @click="saveEmployee" class="flex-1 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg">
-          {{ editingEmployee ? 'Save Changes' : 'Add Employee' }}
-        </button>
-      </div>
-    </div>
-  </div>
 
-  <!-- Delete Modal -->
-  <div v-if="showDeleteModal" class="fixed inset-0 z-50 flex items-center justify-center p-4">
-    <div class="absolute inset-0 bg-black/40" @click="showDeleteModal = false"></div>
-    <div class="relative bg-white rounded-xl shadow-xl w-full max-w-sm p-6 z-10 text-center">
-      <h2 class="text-lg font-bold text-gray-900 mb-2">Remove Employee?</h2>
-      <p class="text-sm text-gray-400 mb-5">
-        Are you sure you want to remove <span class="font-medium text-gray-700">{{ deletingEmployee?.name }}</span>?
-      </p>
-      <div class="flex gap-3">
-        <button @click="showDeleteModal = false" class="flex-1 py-2 border rounded-lg text-sm text-gray-600 hover:bg-gray-50">Cancel</button>
-        <button @click="deleteEmployee" class="flex-1 py-2 bg-red-500 hover:bg-red-600 text-white text-sm font-medium rounded-lg">Remove</button>
-      </div>
-    </div>
-  </div>
 </template>

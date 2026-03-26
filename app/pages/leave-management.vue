@@ -17,7 +17,7 @@ function handleSubmit() {
     <div class="w-full mr-7 mt-10 ml-7">
       <div class="flex justify-between">
         <div class="">
-          <h2 class="text-3xl font-syne font-bold text-5xl tracking-tighter">
+          <h2 class="text-4xl font-bold mb-4">
             Leave Management
           </h2>
           <p class="text-gray-500">
