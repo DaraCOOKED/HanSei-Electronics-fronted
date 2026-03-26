@@ -1,10 +1,15 @@
 <script setup>
+
 import { ref, computed } from 'vue'
 import AppSidebar from '~/components/AppSidebar.vue'
 import Employee from '~/components/Employee.vue'
+import EmployeeStaff from '~/components/EmployeeStaff.vue'
+
+
 
 const searchQuery = ref('')
 const selectedValue = ref('')
+
 
 const employees = ref([
   { picture: '', name: 'Bora', email: 'chorkbora4@gmail.com', department: 'engineering', role: 'Lead Engineer', salary: '130,000', status: 'active' },
@@ -57,6 +62,7 @@ const editEmployee = (emp) => {
 const deleteEmployee = (emp) => {
   // TODO: Implement delete functionality
   console.log('Delete employee:', emp)
+
 }
 </script>
 
@@ -125,4 +131,5 @@ const deleteEmployee = (emp) => {
 
         </div>
     </div>
+
 </template>

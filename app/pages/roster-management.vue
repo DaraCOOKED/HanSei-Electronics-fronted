@@ -1,4 +1,5 @@
 <script setup>
+
 import AppSidebar from "~/components/AppSidebar.vue";
 import { ref } from "vue"
 
@@ -48,9 +49,11 @@ const deleteRoster = (id) => {
 
 <template>
     <div class="flex min-h-screen">
+
         <AppSidebar />
         <div class="mt-6 p-6 w-full">
             <h1 class="text-4xl font-bold mb-4">Roster Management</h1>
+
 
             <!-- Create Shift -->
             <div class="border p-4 mb-6 rounded-lg bg-white shadow-sm">
@@ -94,6 +97,7 @@ const deleteRoster = (id) => {
                     No shifts created yet. Create your first shift above.
                 </div>
 
+
                 <div v-else class="overflow-x-auto">
                     <table class="w-full border-collapse border border-gray-300">
 
@@ -134,4 +138,5 @@ const deleteRoster = (id) => {
             </div>
         </div>
     </div>
+
 </template>
