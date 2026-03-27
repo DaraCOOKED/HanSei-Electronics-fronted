@@ -125,7 +125,7 @@ const handleRegister = async () => {
       <div class="pt-6 border-t border-gray-100 text-center">
         <p class="text-sm text-gray-600">
           Already have an account? 
-          <NuxtLink to="/login" class="font-bold text-blue-600 hover:text-blue-500">Sign in</NuxtLink>
+          <NuxtLink to="/login" class="font-bold text-blue-600 hover:text-blue-500">Log in</NuxtLink>
         </p>
       </div>
     </div>
