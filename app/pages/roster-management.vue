@@ -76,65 +76,56 @@ const deleteRoster = (id) => {
             </div>
 
             <!-- Assign Employees -->
-            <div class="border p-4 mb-6 rounded-lg bg-white shadow-sm">
+            <!-- Assign Employees -->
+            <div class="border p-4 mb-6 rounded">
 
                 <h2 class="text-xl mb-3 font-black">Assign Employees</h2>
 
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
-                    <label v-for="emp in employees" :key="emp" class="flex items-center gap-2">
-                        <input type="checkbox" :value="emp" v-model="selectedEmployees" class="rounded">
-                        <span class="text-sm">{{ emp }}</span>
+                <div v-for="emp in employees" :key="emp">
+                    <label>
+                        <input type="checkbox" :value="emp" v-model="selectedEmployees">
+
+                        {{ emp }}
                     </label>
                 </div>
+
             </div>
 
             <!-- Roster Table -->
-            <div class="border p-4 rounded-lg bg-white shadow-sm">
+            <!-- Roster Table -->
+            <div class="border p-4 rounded">
 
                 <h2 class="text-xl font-black mb-3">Roster List</h2>
 
-                <div v-if="rosters.length === 0" class="text-center py-8 text-gray-500">
-                    No shifts created yet. Create your first shift above.
-                </div>
+                <table class="w-full border">
+
+                    <thead>
+                        <tr class="bg-gray-200">
+                            <th class="border p-2">Shift</th>
+                            <th class="border p-2">Date</th>
+                            <th class="border p-2">Time</th>
+                            <th class="border p-2">Employees</th>
+                            <th class="border p-2">Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td class="border p-2"></td>
+                            <td class="border p-2"></td>
+                            <td class="border p-2"></td>
+                            <td class="border p-2"></td>
+                            <td class="border p-2">
+                                <button class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600">
+                                    Delete
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
 
 
-                <div v-else class="overflow-x-auto">
-                    <table class="w-full border-collapse border border-gray-300">
-
-                        <thead>
-                            <tr class="bg-gray-200">
-                                <th class="border border-gray-300 p-3 text-left font-semibold">Shift Name</th>
-                                <th class="border border-gray-300 p-3 text-left font-semibold">Date</th>
-                                <th class="border border-gray-300 p-3 text-left font-semibold">Time</th>
-                                <th class="border border-gray-300 p-3 text-left font-semibold">Employees</th>
-                                <th class="border border-gray-300 p-3 text-left font-semibold">Actions</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <tr v-for="roster in rosters" :key="roster.id" class="hover:bg-gray-50">
-                                <td class="border border-gray-300 p-3">{{ roster.name }}</td>
-                                <td class="border border-gray-300 p-3">{{ roster.date }}</td>
-                                <td class="border border-gray-300 p-3">{{ roster.time }}</td>
-                                <td class="border border-gray-300 p-3">
-                                    <div class="flex flex-wrap gap-1">
-                                        <span v-for="emp in roster.employees" :key="emp"
-                                              class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">
-                                            {{ emp }}
-                                        </span>
-                                    </div>
-                                </td>
-                                <td class="border border-gray-300 p-3">
-                                    <button @click="deleteRoster(roster.id)"
-                                            class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600 text-sm">
-                                        Delete
-                                    </button>
-                                </td>
-                            </tr>
-                        </tbody>
-
-                    </table>
-                </div>
             </div>
         </div>
     </div>

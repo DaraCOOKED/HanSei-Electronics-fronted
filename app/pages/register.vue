@@ -1,5 +1,6 @@
 <script setup>
-import axios from 'axios'
+const { $axios } = useNuxtApp()  // ✅ Use plugin
+
 const form = ref({
   name: '',
   email: '',
@@ -11,7 +12,6 @@ definePageMeta({
   layout: false
 })
 
-
 const isLoading = ref(false)
 
 const handleRegister = async () => {
@@ -22,18 +22,17 @@ const handleRegister = async () => {
 
   isLoading.value = true
   try {
-    const response = await axios.post('http://127.0.0.1:8000/api/register', {
+    const response = await $axios.post('/register', {  // ✅ Short URL
       name: form.value.name,
       email: form.value.email,
       password: form.value.password,
       password_confirmation: form.value.confirmPassword
     })
 
-    // Save token
+    // ✅ Fix: access_token not token
     const cookie = useCookie('token')
-    cookie.value = response.data.token
+    cookie.value = response.data.access_token
 
-    // Go to dashboard
     navigateTo('/login')
 
   } catch (err) {

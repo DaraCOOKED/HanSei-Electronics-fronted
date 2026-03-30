@@ -1,6 +1,5 @@
 <script setup>
 import axios from 'axios'
-import { ref } from 'vue'
 
 const email = ref('')
 const password = ref('')
@@ -8,9 +7,7 @@ const isLoading = ref(false)
 const error = ref('')
 
 useHead({
-  bodyAttrs: {
-    class: 'bg-blue-500'
-  }
+  bodyAttrs: { class: 'bg-blue-500' }
 })
 
 definePageMeta({
@@ -23,25 +20,28 @@ const handleLogin = async () => {
 
   try {
     const response = await axios.post('http://127.0.0.1:8000/api/login', {
-  email: email.value,
-  password: password.value
-}, {
-  headers: {
-    'Content-Type': 'application/json',
-    'Accept': 'application/json'
-  }
-})
+      email: email.value,
+      password: password.value
+    }, {
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      }
+    })
 
-    // Save token to cookie
-    const cookie = useCookie('token')
-    cookie.value = response.data.token
+    console.log('Login success:', response.data)
 
-    // Go to dashboard
-    navigateTo('/dashboard')
+    if (response.data.access_token) {
+      const cookie = useCookie('token')
+      cookie.value = response.data.access_token
+      navigateTo('/dashboard')
+    } else {
+      error.value = 'Login failed - no token received!'
+    }
 
   } catch (err) {
     error.value = 'Wrong email or password!'
-    console.error('Login error:', err)
+    console.error('Login error:', err?.response?.data)
   } finally {
     isLoading.value = false
   }

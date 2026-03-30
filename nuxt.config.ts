@@ -13,5 +13,11 @@ export default defineNuxtConfig({
     '@fortawesome/fontawesome-free/css/all.min.css'
   ],
 
-  modules: ['@nuxt/fonts']
+  modules: [
+    '@nuxt/fonts',
+  ],
+
+  plugins: [
+    '~/plugins/axios.ts'  // ✅ Register axios plugin
+  ],
 })
